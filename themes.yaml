@@ -1,0 +1,10 @@
+name: "Hugo Rankpillar"
+license: "MIT"
+licenselink: ""
+description: "A Hugo website theme by Rankpillar"
+homepage: "https://hugo-novela-forestry.netlify.com/"
+min_version: "0.65.0"
+
+author:
+    name: "Ihsan Arif"
+    homepage: "https://santekno.com/"
