@@ -2,19 +2,19 @@
 <html lang="{{ .Site.Language.Lang }}" dir="{{ .Site.Language.LanguageDirection | default "ltr" }}">
 <head>
     {{ partial "head.html" . }}
-	<link rel="stylesheet" href="{{ $.Site.BaseURL }}css/colors/navy.css">
 	<link rel="preload" href="{{ $.Site.BaseURL }}css/fonts/thicccboi.css" as="style" onload="this.rel='stylesheet'">
 </head>
 <body>
 	<div class="content-wrapper">
-		{{ partial "header.html"}}
+		{{ partial "header.html" .}}
 		<!-- /header -->
 		{{ block "main" . }}{{ end }}
 		<!-- /section -->
 	</div>
 	<!-- /.content-wrapper -->
-	<footer class="bg-navy text-inverse">
-		{{ partial "footer.html" }}
+	<!-- /.content-wrapper -->
+	<footer class="bg-dark text-inverse">
+		{{ partial "footer.html" . }}
 	</footer>
 	{{ partial "page-progress.html" . }}
 	{{ partial "scripts.html" . }}
