@@ -24,30 +24,30 @@
           <div class="col-3 offset-1 offset-lg-0 col-lg-4 d-flex flex-column" data-cues="zoomIn" data-group="col-start"
             data-delay="300">
             <div class="ms-auto mt-auto"><img class="img-fluid rounded shadow-lg"
-                src="{{ $.Site.BaseURL }}img/{{ $information.home.one.images.image_one }}"
-                srcset="{{ $.Site.BaseURL }}img/{{ $information.home.one.images.image_one }} 2x" alt="" /></div>
+                src="{{ $.Site.BaseURL }}{{ $information.home.one.images.image_one }}"
+                srcset="{{ $.Site.BaseURL }}{{ $information.home.one.images.image_one }} 2x" alt="" /></div>
             <div class="ms-auto mt-5 mb-10"><img class="img-fluid rounded shadow-lg"
-                src="{{ $.Site.BaseURL }}img/{{ $information.home.one.images.image_two }}"
-                srcset="{{ $.Site.BaseURL }}img/{{ $information.home.one.images.image_two }} 2x" alt="" /></div>
+                src="{{ $.Site.BaseURL }}{{ $information.home.one.images.image_two }}"
+                srcset="{{ $.Site.BaseURL }}{{ $information.home.one.images.image_two }} 2x" alt="" /></div>
           </div>
           <!-- /column -->
           <div class="col-4 col-lg-5" data-cue="zoomIn">
             <div><img class="w-100 img-fluid rounded shadow-lg"
-                src="{{ $.Site.BaseURL }}img/{{ $information.home.one.images.image_three }}"
-                srcset="{{ $.Site.BaseURL }}img/{{ $information.home.one.images.image_three }} 2x" alt="" />
+                src="{{ $.Site.BaseURL }}{{ $information.home.one.images.image_three }}"
+                srcset="{{ $.Site.BaseURL }}{{ $information.home.one.images.image_three }} 2x" alt="" />
             </div>
           </div>
           <!-- /column -->
           <div class="col-3 d-flex flex-column" data-cues="zoomIn" data-group="col-end" data-delay="300">
             <div class="mt-auto"><img class="img-fluid rounded shadow-lg"
-                src="{{ $.Site.BaseURL }}img/{{ $information.home.one.images.image_four }}"
-                srcset="{{ .Site.BaseURL }}img/{{ $information.home.one.images.image_four }} 2x" alt="" /></div>
+                src="{{ $.Site.BaseURL }}{{ $information.home.one.images.image_four }}"
+                srcset="{{ .Site.BaseURL }}{{ $information.home.one.images.image_four }} 2x" alt="" /></div>
             <div class="mt-5"><img class="img-fluid rounded shadow-lg"
-                src="{{ $.Site.BaseURL }}img/{{ $information.home.one.images.image_five }}"
-                srcset="{{ .Site.BaseURL }}img/{{ $information.home.one.images.image_five }} 2x" alt="" /></div>
+                src="{{ $.Site.BaseURL }}{{ $information.home.one.images.image_five }}"
+                srcset="{{ .Site.BaseURL }}{{ $information.home.one.images.image_five }} 2x" alt="" /></div>
             <div class="mt-5 mb-10"><img class="img-fluid rounded shadow-lg"
-                src="{{ $.Site.BaseURL }}img/{{ $information.home.one.images.image_six }}"
-                srcset="{{ .Site.BaseURL }}img/{{ $information.home.one.images.image_six }} 2x" alt="" /></div>
+                src="{{ $.Site.BaseURL }}{{ $information.home.one.images.image_six }}"
+                srcset="{{ .Site.BaseURL }}{{ $information.home.one.images.image_six }} 2x" alt="" /></div>
           </div>
           <!-- /column -->
         </div>
@@ -76,7 +76,7 @@
       class="nav nav-tabs nav-tabs-bg nav-tabs-shadow-lg d-flex justify-content-between nav-justified flex-lg-row flex-column">
       {{ range $information.home.two.widgets}}
       <li class="nav-item"> <a class="nav-link d-flex flex-row active" data-bs-toggle="tab">
-          <div><img src="{{ $.Site.BaseURL }}img/{{ .icon }}"
+          <div><img src="{{ $.Site.BaseURL }}{{ .icon }}"
               class="svg-inject icon-svg icon-svg-md text-{{ .color }} me-4" alt="" /></div>
           <div>
             <h4 class="mb-1">{{ .title }}</h4>
@@ -99,20 +99,20 @@
         <div class="row gx-md-5 gy-5 position-relative">
           <div class="col-6">
             <img class="img-fluid rounded shadow-lg mb-5"
-              src="{{ $.Site.BaseURL }}img/{{ $information.home.three.images.image_one }}"
-              srcset="{{ $.Site.BaseURL }}img/{{ $information.home.three.images.image_one }} 2x" alt="" />
+              src="{{ $.Site.BaseURL }}{{ $information.home.three.images.image_one }}"
+              srcset="{{ $.Site.BaseURL }}{{ $information.home.three.images.image_one }} 2x" alt="" />
             <img class="img-fluid rounded shadow-lg d-flex col-10 ms-auto"
-              src="{{ $.Site.BaseURL }}img/{{ $information.home.three.images.image_two }}"
-              srcset="{{ $.Site.BaseURL }}img/{{ $information.home.three.images.image_two }} 2x" alt="" />
+              src="{{ $.Site.BaseURL }}{{ $information.home.three.images.image_two }}"
+              srcset="{{ $.Site.BaseURL }}{{ $information.home.three.images.image_two }} 2x" alt="" />
           </div>
           <!-- /column -->
           <div class="col-6">
             <img class="img-fluid rounded shadow-lg my-5"
-              src="{{ $.Site.BaseURL }}img/{{ $information.home.three.images.image_three }}"
-              srcset="{{ $.Site.BaseURL }}img/{{ $information.home.three.images.image_three }} 2x" alt="" />
+              src="{{ $.Site.BaseURL }}{{ $information.home.three.images.image_three }}"
+              srcset="{{ $.Site.BaseURL }}{{ $information.home.three.images.image_three }} 2x" alt="" />
             <img class="img-fluid rounded shadow-lg d-flex col-10"
-              src="{{ $.Site.BaseURL }}img/{{ $information.home.three.images.image_four }}"
-              srcset="{{ $.Site.BaseURL }}img/{{ $information.home.three.images.image_four }} 2x" alt="" />
+              src="{{ $.Site.BaseURL }}{{ $information.home.three.images.image_four }}"
+              srcset="{{ $.Site.BaseURL }}{{ $information.home.three.images.image_four }} 2x" alt="" />
           </div>
           <!-- /column -->
         </div>
@@ -152,20 +152,20 @@
         <div class="row gx-md-5 gy-5 position-relative">
           <div class="col-5">
             <img class="img-fluid rounded shadow-lg my-5 d-flex ms-auto" data-cue="fadeIn" data-delay="300"
-              src="{{ $.Site.BaseURL }}img/{{ $information.home.four.images.image_one }}"
-              srcset="{{ $.Site.BaseURL }}img/{{ $information.home.four.images.image_one }} 2x" alt="" />
+              src="{{ $.Site.BaseURL }}{{ $information.home.four.images.image_one }}"
+              srcset="{{ $.Site.BaseURL }}{{ $information.home.four.images.image_one }} 2x" alt="" />
             <img class="img-fluid rounded shadow-lg d-flex col-10 ms-auto" data-cue="fadeIn" data-delay="600"
-              src="{{ $.Site.BaseURL }}img/{{ $information.home.four.images.image_two }}"
-              srcset="{{ $.Site.BaseURL }}img/{{ $information.home.four.images.image_two }} 2x" alt="" />
+              src="{{ $.Site.BaseURL }}{{ $information.home.four.images.image_two }}"
+              srcset="{{ $.Site.BaseURL }}{{ $information.home.four.images.image_two }} 2x" alt="" />
           </div>
           <!-- /column -->
           <div class="col-7">
             <img class="img-fluid rounded shadow-lg mb-5" data-cue="fadeIn" data-delay="900"
-              src="{{ $.Site.BaseURL }}img/{{ $information.home.four.images.image_three }}"
-              srcset="{{ $.Site.BaseURL }}img/{{ $information.home.four.images.image_three }} 2x" alt="" />
+              src="{{ $.Site.BaseURL }}{{ $information.home.four.images.image_three }}"
+              srcset="{{ $.Site.BaseURL }}{{ $information.home.four.images.image_three }} 2x" alt="" />
             <img class="img-fluid rounded shadow-lg d-flex col-11" data-cue="fadeIn" data-delay="1200"
-              src="{{ $.Site.BaseURL }}img/{{ $information.home.four.images.image_four }}"
-              srcset="{{ $.Site.BaseURL }}img/{{ $information.home.four.images.image_four }} 2x" alt="" />
+              src="{{ $.Site.BaseURL }}{{ $information.home.four.images.image_four }}"
+              srcset="{{ $.Site.BaseURL }}{{ $information.home.four.images.image_four }} 2x" alt="" />
           </div>
           <!-- /column -->
         </div>
@@ -204,7 +204,7 @@
         <h3 class="display-4 mb-0 text-center px-xl-10 px-xxl-15">{{ $information.home.five.title }}</h3>
         <div class="row gx-lg-8 gx-xl-12 process-wrapper text-center mt-9" data-cues="slideInUp" data-group="process">
           {{ range $information.home.five.steps }}
-          <div class="col-md-4"> <img src="{{ $.Site.BaseURL }}img/{{ .icon }}" class="svg-inject icon-svg icon-svg-md text-{{ .color }} mb-3" alt="" />
+          <div class="col-md-4"> <img src="{{ $.Site.BaseURL }}{{ .icon }}" class="svg-inject icon-svg icon-svg-md text-{{ .color }} mb-3" alt="" />
             <h4 class="mb-1">{{ .title }}</h4>
             <p>{{ .description }}</p>
           </div>
@@ -228,16 +228,16 @@
         <div class="row gx-md-5 gy-5">
           <div class="col-md-6">
             <figure class="rounded mt-md-10 position-relative"><img
-              src="{{ $.Site.BaseURL }}img/{{ $information.home.six.images.image_one }}"
-              srcset="{{ .Site.BaseURL }}img/{{ $information.home.six.images.image_one }} 2x" alt=""></figure>
+              src="{{ $.Site.BaseURL }}{{ $information.home.six.images.image_one }}"
+              srcset="{{ .Site.BaseURL }}{{ $information.home.six.images.image_one }} 2x" alt=""></figure>
           </div>
           <!--/column -->
           <div class="col-md-6">
             <div class="row gx-md-5 gy-5">
               <div class="col-md-12 order-md-2">
                 <figure class="rounded"><img
-                  src="{{ $.Site.BaseURL }}img/{{ $information.home.six.images.image_two }}"
-                  srcset="{{ $.Site.BaseURL }}img/{{ $information.home.six.images.image_two }} 2x" alt="">
+                  src="{{ $.Site.BaseURL }}{{ $information.home.six.images.image_two }}"
+                  srcset="{{ $.Site.BaseURL }}{{ $information.home.six.images.image_two }} 2x" alt="">
               </figure>
               </div>
               <!--/column -->
@@ -291,7 +291,7 @@
     <h2 class="fs-15 text-uppercase text-muted text-center mb-8">{{ $information.home.seven.client.title }}</h2>
     <div class="carousel owl-carousel clients mb-0" data-margin="30" data-loop="true" data-dots="false" data-autoplay="true" data-autoplay-timeout="3000" data-responsive='{"0":{"items": "2"}, "768":{"items": "4"}, "992":{"items": "5"}, "1200":{"items": "6"}, "1400":{"items": "7"}}'>
       {{ range $information.clients.client }}
-      <div class="item px-5"><img src="{{ $.Site.BaseURL }}img/{{ .logo }}" alt="{{ .title }}" /></div>
+      <div class="item px-5"><img src="{{ $.Site.BaseURL }}{{ .logo }}" alt="{{ .title }}" /></div>
       {{ end }}
     </div>
   </div>
@@ -333,7 +333,7 @@
       <div class="item">
         <article>
           <figure class="overlay overlay1 hover-scale rounded mb-5"><a href="#"> <img
-                src="{{ .Site.BaseURL }}img/photos/b4.jpg" alt="" /></a>
+                src="{{ .Site.BaseURL }}photos/b4.jpg" alt="" /></a>
             <figcaption>
               <h5 class="from-top mb-0">Read More</h5>
             </figcaption>
@@ -362,7 +362,7 @@
       <div class="item">
         <article>
           <figure class="overlay overlay1 hover-scale rounded mb-5"><a href="#"> <img
-                src="{{ .Site.BaseURL }}img/photos/b5.jpg" alt="" /></a>
+                src="{{ .Site.BaseURL }}photos/b5.jpg" alt="" /></a>
             <figcaption>
               <h5 class="from-top mb-0">Read More</h5>
             </figcaption>
@@ -391,7 +391,7 @@
       <div class="item">
         <article>
           <figure class="overlay overlay1 hover-scale rounded mb-5"><a href="#"> <img
-                src="{{ .Site.BaseURL }}img/photos/b6.jpg" alt="" /></a>
+                src="{{ .Site.BaseURL }}photos/b6.jpg" alt="" /></a>
             <figcaption>
               <h5 class="from-top mb-0">Read More</h5>
             </figcaption>
@@ -420,7 +420,7 @@
       <div class="item">
         <article>
           <figure class="overlay overlay1 hover-scale rounded mb-5"><a href="#"> <img
-                src="{{ .Site.BaseURL }}img/photos/b7.jpg" alt="" /></a>
+                src="{{ .Site.BaseURL }}photos/b7.jpg" alt="" /></a>
             <figcaption>
               <h5 class="from-top mb-0">Read More</h5>
             </figcaption>
