@@ -2,25 +2,25 @@
     {{ $menu := index .Site.Data .Site.Language.Lang }}
     {{ range $menu.menu.main }}
     <li class="nav-item {{ if .has_child }} dropdown {{ end }}">
-        <a class="nav-link {{ if .has_child }} dropdown-toggle {{ end }}" href="{{ $.Site.BaseURL }}{{ .url }}">{{ .title }}</a>
+        <a class="nav-link {{ if .has_child }} dropdown-toggle {{ end }}" href="{{ .Site.BaseURL }}{{ .url }}">{{ .title }}</a>
         {{ if .has_child }}
         <ul class="dropdown-menu">
             {{ $two := index .childs }}
             {{ range $two }}
             <li class="dropdown">
-                <a class="dropdown-item {{ if .has_child }} dropdown-toogle {{ end }}" href="{{ $.Site.BaseURL }}{{ .url }}">{{ .title }}</a>
+                <a class="dropdown-item {{ if .has_child }} dropdown-toogle {{ end }}" href="{{ .Site.BaseURL }}{{ .url }}">{{ .title }}</a>
                 {{ if .has_child }}
                 <ul class="dropdown-menu">
                     {{ $three := index .childs }}
                     {{ range $three }}
                     <li class="{{ if .has_child }} dropdown {{ else }} nav-item {{ end }}">
-                        <a class="dropdown-item {{ if .has_child }} dropdown-toggle {{ end }}" href="{{ $.Site.BaseURL}}{{ .url }}">{{ .title }}</a>
+                        <a class="dropdown-item {{ if .has_child }} dropdown-toggle {{ end }}" href="{{ .Site.BaseURL}}{{ .url }}">{{ .title }}</a>
                         {{ if .has_child }}
                         <ul class="dropdown-menu">
                             {{ $four := index .childs }}
                             {{ range $four }}
                             <li class="nav-item">
-                                <a class="dropdown-item" href="{{ $.Site.BaseURL }}{{ .url }}">{{ .title }}</a>
+                                <a class="dropdown-item" href="{{ .Site.BaseURL }}{{ .url }}">{{ .title }}</a>
                             </li>
                             {{ end }}
                         </ul>

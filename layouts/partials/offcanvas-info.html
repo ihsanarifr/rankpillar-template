@@ -1,7 +1,7 @@
 {{ $footer := index .Site.Data .Site.Language.Lang }}
 <div class="offcanvas-info text-inverse">
     <button type="button" class="btn-close btn-close-white offcanvas-close offcanvas-info-close" aria-label="Close"></button>
-    <a href="{{ .Site.BaseURL }}"><img src="{{ .Site.BaseURL }}{{ .Site.Params.LogoLightURL }}" srcset="{{ .Site.BaseURL }}{{ .Site.Params.LogoLightURL }} 2x" alt="" /></a>
+    <a href="{{ $.Site.BaseURL }}"><img src="{{ $.Site.BaseURL }}{{ .Site.Params.LogoLightURL }}" srcset="{{ $.Site.BaseURL }}{{ .Site.Params.LogoLightURL }} 2x" alt="" /></a>
     <div class="mt-4 widget">
       <p>{{ .Site.Params.descriptionSidebar }}</p>
     </div>

@@ -41,13 +41,13 @@
           <div class="col-3 d-flex flex-column" data-cues="zoomIn" data-group="col-end" data-delay="300">
             <div class="mt-auto"><img class="img-fluid rounded shadow-lg"
                 src="{{ $.Site.BaseURL }}{{ $information.home.one.images.image_four }}"
-                srcset="{{ .Site.BaseURL }}{{ $information.home.one.images.image_four }} 2x" alt="" /></div>
+                srcset="{{ $.Site.BaseURL }}{{ $information.home.one.images.image_four }} 2x" alt="" /></div>
             <div class="mt-5"><img class="img-fluid rounded shadow-lg"
                 src="{{ $.Site.BaseURL }}{{ $information.home.one.images.image_five }}"
-                srcset="{{ .Site.BaseURL }}{{ $information.home.one.images.image_five }} 2x" alt="" /></div>
+                srcset="{{ $.Site.BaseURL }}{{ $information.home.one.images.image_five }} 2x" alt="" /></div>
             <div class="mt-5 mb-10"><img class="img-fluid rounded shadow-lg"
                 src="{{ $.Site.BaseURL }}{{ $information.home.one.images.image_six }}"
-                srcset="{{ .Site.BaseURL }}{{ $information.home.one.images.image_six }} 2x" alt="" /></div>
+                srcset="{{ $.Site.BaseURL }}{{ $information.home.one.images.image_six }} 2x" alt="" /></div>
           </div>
           <!-- /column -->
         </div>
@@ -229,7 +229,7 @@
           <div class="col-md-6">
             <figure class="rounded mt-md-10 position-relative"><img
               src="{{ $.Site.BaseURL }}{{ $information.home.six.images.image_one }}"
-              srcset="{{ .Site.BaseURL }}{{ $information.home.six.images.image_one }} 2x" alt=""></figure>
+              srcset="{{ $.Site.BaseURL }}{{ $information.home.six.images.image_one }} 2x" alt=""></figure>
           </div>
           <!--/column -->
           <div class="col-md-6">
@@ -301,7 +301,7 @@
       <div class="row gx-0 gx-md-8 gx-xl-12 gy-8 align-items-center">
         {{ range $information.partners.partner }}
         <div class="col-4 col-md-2">
-          <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ .Site.BaseURL }}{{ .logo }}" alt="{{ .title }}"></figure>
+          <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ $.Site.BaseURL }}{{ .logo }}" alt="{{ .title }}"></figure>
         </div>
         {{ end }}
       </div>
@@ -313,7 +313,7 @@
       <div class="row gx-0 gx-md-8 gx-xl-12 gy-8 align-items-center">
         {{ range $information.media.media }}
         <div class="col-4 col-md-2">
-          <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ .Site.BaseURL }}{{ .logo }}" alt="{{ .title }}"></figure>
+          <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ $.Site.BaseURL }}{{ .logo }}" alt="{{ .title }}"></figure>
         </div>
         {{ end }}
       </div>
@@ -333,7 +333,7 @@
       <div class="item">
         <article>
           <figure class="overlay overlay1 hover-scale rounded mb-5"><a href="#"> <img
-                src="{{ .Site.BaseURL }}photos/b4.jpg" alt="" /></a>
+                src="{{ $.Site.BaseURL }}photos/b4.jpg" alt="" /></a>
             <figcaption>
               <h5 class="from-top mb-0">Read More</h5>
             </figcaption>
@@ -362,7 +362,7 @@
       <div class="item">
         <article>
           <figure class="overlay overlay1 hover-scale rounded mb-5"><a href="#"> <img
-                src="{{ .Site.BaseURL }}photos/b5.jpg" alt="" /></a>
+                src="{{ $.Site.BaseURL }}photos/b5.jpg" alt="" /></a>
             <figcaption>
               <h5 class="from-top mb-0">Read More</h5>
             </figcaption>
@@ -391,7 +391,7 @@
       <div class="item">
         <article>
           <figure class="overlay overlay1 hover-scale rounded mb-5"><a href="#"> <img
-                src="{{ .Site.BaseURL }}photos/b6.jpg" alt="" /></a>
+                src="{{ $.Site.BaseURL }}photos/b6.jpg" alt="" /></a>
             <figcaption>
               <h5 class="from-top mb-0">Read More</h5>
             </figcaption>
@@ -420,7 +420,7 @@
       <div class="item">
         <article>
           <figure class="overlay overlay1 hover-scale rounded mb-5"><a href="#"> <img
-                src="{{ .Site.BaseURL }}photos/b7.jpg" alt="" /></a>
+                src="{{ $.Site.BaseURL }}photos/b7.jpg" alt="" /></a>
             <figcaption>
               <h5 class="from-top mb-0">Read More</h5>
             </figcaption>
