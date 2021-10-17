@@ -301,7 +301,7 @@
       <div class="row gx-0 gx-md-8 gx-xl-12 gy-8 align-items-center">
         {{ range $information.partners.partner }}
         <div class="col-4 col-md-2">
-          <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ $.Site.BaseURL}}img/{{ .logo }}" alt="{{ .title }}"></figure>
+          <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ .Site.BaseURL }}{{ .logo }}" alt="{{ .title }}"></figure>
         </div>
         {{ end }}
       </div>
@@ -313,7 +313,7 @@
       <div class="row gx-0 gx-md-8 gx-xl-12 gy-8 align-items-center">
         {{ range $information.media.media }}
         <div class="col-4 col-md-2">
-          <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ $.Site.BaseURL}}img/{{ .logo }}" alt="{{ .title }}"></figure>
+          <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ .Site.BaseURL }}{{ .logo }}" alt="{{ .title }}"></figure>
         </div>
         {{ end }}
       </div>
