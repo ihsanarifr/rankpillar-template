@@ -1,530 +1,453 @@
+{{ $information := index .Site.Data .Site.Language.Lang }}
 <section class="wrapper bg-soft-primary">
-    <div class="container pt-10 pb-12 pt-md-14 pb-md-17">
-      <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
-        <div class="col-md-10 offset-md-1 offset-lg-0 col-lg-5 mt-lg-n2 text-center text-lg-start order-2 order-lg-0" data-cues="slideInDown" data-group="page-title" data-delay="600">
-          <h1 class="display-1 mb-5 mx-md-10 mx-lg-0">Sandbox is effortless and powerful with <br /><span class="typer text-primary text-nowrap" data-delay="100" data-delim=":" data-words="easy usage:fast transactions:secure payments"></span><span class="cursor text-primary" data-owner="typer"></span></h1>
-          <p class="lead fs-lg mb-7">Achieve your saving goals. Have all your recurring and one time expenses and incomes in one place.</p>
-          <div class="d-flex justify-content-center justify-content-lg-start" data-cues="slideInDown" data-group="page-title-buttons" data-delay="900">
-            <span><a class="btn btn-lg btn-primary rounded me-2">Get Started</a></span>
-            <span><a class="btn btn-lg btn-yellow rounded">Free Trial</a></span>
-          </div>
+  <div class="container pt-10 pb-12 pt-md-14 pb-md-17">
+    <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+      <div class="col-md-10 offset-md-1 offset-lg-0 col-lg-5 mt-lg-n2 text-center text-lg-start order-2 order-lg-0"
+        data-cues="slideInDown" data-group="page-title" data-delay="600">
+        <h1 class="display-1 mb-5 mx-md-10 mx-lg-0">
+          {{ $information.home.section.one.title }}<br />
+          <span class="typer text-primary text-nowrap" data-delay="100" data-delim=":"
+            data-words="{{ $information.home.section.one.title_running }}"></span><span class="cursor text-primary"
+            data-owner="typer"></span>
+        </h1>
+        <p class="lead fs-lg mb-7">{{ $information.home.section.one.short_description }}</p>
+        <div class="d-flex justify-content-center justify-content-lg-start" data-cues="slideInDown"
+          data-group="page-title-buttons" data-delay="900">
+          {{ range $information.home.section.one.button }}
+          <span><a href="{{ .link }}" class="btn btn-lg btn-{{ .color }} rounded me-2">{{ .title }}</a></span>
+          {{ end }}
         </div>
-        <!-- /column -->
-        <div class="col-lg-7">
-          <div class="row">
-            <div class="col-3 offset-1 offset-lg-0 col-lg-4 d-flex flex-column" data-cues="zoomIn" data-group="col-start" data-delay="300">
-              <div class="ms-auto mt-auto"><img class="img-fluid rounded shadow-lg" src="{{ .Site.BaseURL }}img/photos/sa20.jpg" srcset="{{ .Site.BaseURL }}img/photos/sa20@2x.jpg 2x" alt="" /></div>
-              <div class="ms-auto mt-5 mb-10"><img class="img-fluid rounded shadow-lg" src="{{ .Site.BaseURL }}img/photos/sa18.jpg" srcset="{{ .Site.BaseURL }}img/photos/sa18@2x.jpg 2x" alt="" /></div>
-            </div>
-            <!-- /column -->
-            <div class="col-4 col-lg-5" data-cue="zoomIn">
-              <div><img class="w-100 img-fluid rounded shadow-lg" src="{{ .Site.BaseURL }}img/photos/sa16.jpg" srcset="{{ .Site.BaseURL }}img/photos/sa16@2x.jpg 2x" alt="" /></div>
-            </div>
-            <!-- /column -->
-            <div class="col-3 d-flex flex-column" data-cues="zoomIn" data-group="col-end" data-delay="300">
-              <div class="mt-auto"><img class="img-fluid rounded shadow-lg" src="{{ .Site.BaseURL }}img/photos/sa21.jpg" srcset="{{ .Site.BaseURL }}img/photos/sa21@2x.jpg 2x" alt="" /></div>
-              <div class="mt-5"><img class="img-fluid rounded shadow-lg" src="{{ .Site.BaseURL }}img/photos/sa19.jpg" srcset="{{ .Site.BaseURL }}img/photos/sa19@2x.jpg 2x" alt="" /></div>
-              <div class="mt-5 mb-10"><img class="img-fluid rounded shadow-lg" src="{{ .Site.BaseURL }}img/photos/sa17.jpg" srcset="{{ .Site.BaseURL }}img/photos/sa17@2x.jpg 2x" alt="" /></div>
-            </div>
-            <!-- /column -->
-          </div>
-          <!-- /.row -->
-        </div>
-        <!-- /column -->
       </div>
-      <!-- /.row -->
+      <!-- /column -->
+      <div class="col-lg-7">
+        <div class="row">
+          <div class="col-3 offset-1 offset-lg-0 col-lg-4 d-flex flex-column" data-cues="zoomIn" data-group="col-start"
+            data-delay="300">
+            <div class="ms-auto mt-auto"><img class="img-fluid rounded shadow-lg"
+                src="{{ $.Site.BaseURL }}img/{{ $information.home.section.one.images.image_one }}"
+                srcset="{{ $.Site.BaseURL }}img/{{ $information.home.section.one.images.image_one }} 2x" alt="" /></div>
+            <div class="ms-auto mt-5 mb-10"><img class="img-fluid rounded shadow-lg"
+                src="{{ $.Site.BaseURL }}img/{{ $information.home.section.one.images.image_two }}"
+                srcset="{{ $.Site.BaseURL }}img/{{ $information.home.section.one.images.image_two }} 2x" alt="" /></div>
+          </div>
+          <!-- /column -->
+          <div class="col-4 col-lg-5" data-cue="zoomIn">
+            <div><img class="w-100 img-fluid rounded shadow-lg"
+                src="{{ $.Site.BaseURL }}img/{{ $information.home.section.one.images.image_three }}"
+                srcset="{{ $.Site.BaseURL }}img/{{ $information.home.section.one.images.image_three }} 2x" alt="" />
+            </div>
+          </div>
+          <!-- /column -->
+          <div class="col-3 d-flex flex-column" data-cues="zoomIn" data-group="col-end" data-delay="300">
+            <div class="mt-auto"><img class="img-fluid rounded shadow-lg"
+                src="{{ $.Site.BaseURL }}img/{{ $information.home.section.one.images.image_four }}"
+                srcset="{{ .Site.BaseURL }}img/{{ $information.home.section.one.images.image_four }} 2x" alt="" /></div>
+            <div class="mt-5"><img class="img-fluid rounded shadow-lg"
+                src="{{ $.Site.BaseURL }}img/{{ $information.home.section.one.images.image_five }}"
+                srcset="{{ .Site.BaseURL }}img/{{ $information.home.section.one.images.image_five }} 2x" alt="" /></div>
+            <div class="mt-5 mb-10"><img class="img-fluid rounded shadow-lg"
+                src="{{ $.Site.BaseURL }}img/{{ $information.home.section.one.images.image_six }}"
+                srcset="{{ .Site.BaseURL }}img/{{ $information.home.section.one.images.image_six }} 2x" alt="" /></div>
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /column -->
     </div>
-    <!-- /.container -->
-  </section>
-  <!-- /section -->
-  <section class="wrapper bg-light">
-    <div class="container py-12 pt-md-12">
-      <!-- /div -->
-      <div class="row">
-        <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 mx-auto text-center">
-          <h2 class="fs-15 text-uppercase text-muted mb-3">Why Choose Sandbox?</h2>
-          <h3 class="display-4 mb-10 px-xl-10 px-xxl-15">Here are a few reasons why our customers choose Sandbox.</h3>
-        </div>
-        <!-- /column -->
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+
+<!-- /section -->
+<section class="wrapper bg-light">
+  <div class="container py-12 pt-md-16">
+    <!-- /div -->
+    <div class="row">
+      <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 mx-auto text-center">
+        <h2 class="fs-15 text-uppercase text-muted mb-3">{{ $information.home.section.two.top_title }}</h2>
+        <h3 class="display-4 mb-10 px-xl-10 px-xxl-15">{{ $information.home.section.two.title }}</h3>
       </div>
-      <!-- /.row -->
-      <ul class="nav nav-tabs nav-tabs-bg nav-tabs-shadow-lg d-flex justify-content-between nav-justified flex-lg-row flex-column">
-        <li class="nav-item"> <a class="nav-link d-flex flex-row active" data-bs-toggle="tab" href="#tab2-1">
-            <div><img src="{{ .Site.BaseURL }}img/icons/rocket.svg" class="svg-inject icon-svg icon-svg-md text-yellow me-4" alt="" /></div>
-            <div>
-              <h4 class="mb-1">Easy Usage</h4>
-              <p>Duis mollis commodo luctus cursus commodo tortor mauris.</p>
-            </div>
-          </a> </li>
-        <li class="nav-item"> <a class="nav-link d-flex flex-row" data-bs-toggle="tab" href="#tab2-2">
-            <div><img src="{{ .Site.BaseURL }}img/icons/savings.svg" class="svg-inject icon-svg icon-svg-md text-green me-4" alt="" /></div>
-            <div>
-              <h4 class="mb-1">Fast Transactions</h4>
-              <p>Vivamus sagittis lacus augue fusce dapibus tellus nibh.</p>
-            </div>
-          </a> </li>
-        <li class="nav-item"> <a class="nav-link d-flex flex-row" data-bs-toggle="tab" href="#tab2-3">
-            <div><img src="{{ .Site.BaseURL }}img/icons/shield.svg" class="svg-inject icon-svg icon-svg-md text-red me-4" alt="" /></div>
-            <div>
-              <h4 class="mb-1">Secure Payments</h4>
-              <p>Vestibulum ligula porta felis maecenas faucibus mollis.</p>
-            </div>
-          </a> </li>
-      </ul>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    <ul
+      class="nav nav-tabs nav-tabs-bg nav-tabs-shadow-lg d-flex justify-content-between nav-justified flex-lg-row flex-column">
+      {{ range $information.home.section.two.widgets}}
+      <li class="nav-item"> <a class="nav-link d-flex flex-row active" data-bs-toggle="tab">
+          <div><img src="{{ $.Site.BaseURL }}img/{{ .icon }}"
+              class="svg-inject icon-svg icon-svg-md text-{{ .color }} me-4" alt="" /></div>
+          <div>
+            <h4 class="mb-1">{{ .title }}</h4>
+            <p>{{ .description }}</p>
+          </div>
+        </a>
+      </li>
+      {{ end }}
       <!-- /.tab-content -->
+  </div>
+  <!-- /.container -->
+</section>
+
+<section class="wrapper bg-light">
+  <div class="container py-12 pt-md-16 py-md-10">
+    <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+      <div class="col-lg-6 position-relative">
+        <div class="shape rounded bg-pale-red rellax d-md-block" data-rellax-speed="0"
+          style="top: 50%; left: 50%; width: 50%; height: 60%; transform: translate(-50%,-50%);z-index:0"></div>
+        <div class="row gx-md-5 gy-5 position-relative">
+          <div class="col-6">
+            <img class="img-fluid rounded shadow-lg mb-5"
+              src="{{ $.Site.BaseURL }}img/{{ $information.home.section.three.images.image_one }}"
+              srcset="{{ $.Site.BaseURL }}img/{{ $information.home.section.three.images.image_one }} 2x" alt="" />
+            <img class="img-fluid rounded shadow-lg d-flex col-10 ms-auto"
+              src="{{ $.Site.BaseURL }}img/{{ $information.home.section.three.images.image_two }}"
+              srcset="{{ $.Site.BaseURL }}img/{{ $information.home.section.three.images.image_two }} 2x" alt="" />
+          </div>
+          <!-- /column -->
+          <div class="col-6">
+            <img class="img-fluid rounded shadow-lg my-5"
+              src="{{ $.Site.BaseURL }}img/{{ $information.home.section.three.images.image_three }}"
+              srcset="{{ $.Site.BaseURL }}img/{{ $information.home.section.three.images.image_three }} 2x" alt="" />
+            <img class="img-fluid rounded shadow-lg d-flex col-10"
+              src="{{ $.Site.BaseURL }}img/{{ $information.home.section.three.images.image_four }}"
+              srcset="{{ $.Site.BaseURL }}img/{{ $information.home.section.three.images.image_four }} 2x" alt="" />
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!--/column -->
+      <div class="col-lg-6">
+        <h3 class="display-4 mb-5">{{ $information.home.section.three.title }}</h3>
+        <p class="mb-5">{{ $information.home.section.three.description }}</p>
+        <div class="row gy-3">
+          <div class="col-xl-12">
+            <ul class="icon-list bullet-bg bullet-soft-red mb-0">
+              {{ range $information.home.section.three.points }}
+              <li>
+                <span><i class="uil uil-check"></i></span>
+                <span>{{ . }}</span>
+              </li>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+        <!--/.row -->
+      </div>
+      <!--/column -->
     </div>
-    <!-- /.container -->
-  </section>
-  <section class="wrapper bg-light">
-    <div class="container py-12 py-md-10">
-      <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
-        <div class="col-lg-6 position-relative">
-          <div class="shape rounded bg-pale-red rellax d-md-block" data-rellax-speed="0" style="top: 50%; left: 50%; width: 50%; height: 60%; transform: translate(-50%,-50%);z-index:0"></div>
-          <div class="row gx-md-5 gy-5 position-relative">
-            <div class="col-6">
-              <img class="img-fluid rounded shadow-lg mb-5" src="{{ .Site.BaseURL }}img/photos/sa5.jpg" srcset="{{ .Site.BaseURL }}img/photos/sa5@2x.jpg 2x" alt="" />
-              <img class="img-fluid rounded shadow-lg d-flex col-10 ms-auto" src="{{ .Site.BaseURL }}img/photos/sa6.jpg" srcset="{{ .Site.BaseURL }}img/photos/sa6@2x.jpg 2x" alt="" />
-            </div>
-            <!-- /column -->
-            <div class="col-6">
-              <img class="img-fluid rounded shadow-lg my-5" src="{{ .Site.BaseURL }}img/photos/sa7.jpg" srcset="{{ .Site.BaseURL }}img/photos/sa7@2x.jpg 2x" alt="" />
-              <img class="img-fluid rounded shadow-lg d-flex col-10" src="{{ .Site.BaseURL }}img/photos/sa8.jpg" srcset="{{ .Site.BaseURL }}img/photos/sa8@2x.jpg 2x" alt="" />
-            </div>
-            <!-- /column -->
+    <!--/.row -->
+  </div>
+  <!-- /.container -->
+</section>
+
+<section class="wrapper bg-light">
+  <div class="container py-12 pt-md-16 pb-md-16">
+    <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+      <div class="col-lg-6 position-relative order-lg-2">
+        <div class="shape rounded bg-pale-green rellax d-block" data-rellax-speed="0"
+          style="top: 50%; left: 50%; width: 50%; height: 60%; transform: translate(-50%,-50%);z-index:0"></div>
+        <div class="row gx-md-5 gy-5 position-relative">
+          <div class="col-5">
+            <img class="img-fluid rounded shadow-lg my-5 d-flex ms-auto" data-cue="fadeIn" data-delay="300"
+              src="{{ $.Site.BaseURL }}img/{{ $information.home.section.four.images.image_one }}"
+              srcset="{{ $.Site.BaseURL }}img/{{ $information.home.section.four.images.image_one }} 2x" alt="" />
+            <img class="img-fluid rounded shadow-lg d-flex col-10 ms-auto" data-cue="fadeIn" data-delay="600"
+              src="{{ $.Site.BaseURL }}img/{{ $information.home.section.four.images.image_two }}"
+              srcset="{{ $.Site.BaseURL }}img/{{ $information.home.section.four.images.image_two }} 2x" alt="" />
           </div>
-          <!-- /.row -->
-        </div>
-        <!--/column -->
-        <div class="col-lg-6">
-          <h3 class="display-4 mb-5">We have considered our solutions to support every stage of growth.</h3>
-          <p class="mb-5">Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo.</p>
-          <div class="row gy-3">
-            <div class="col-xl-6">
-              <ul class="icon-list bullet-bg bullet-soft-red mb-0">
-                <li><span><i class="uil uil-check"></i></span><span>Aenean quam ornare curabitur blandit consectetur.</span></li>
-                <li class="mt-3"><span><i class="uil uil-check"></i></span><span>Nullam quis risus eget urna mollis ornare aenean leo.</span></li>
-              </ul>
-            </div>
-            <!--/column -->
-            <div class="col-xl-6">
-              <ul class="icon-list bullet-bg bullet-soft-red mb-0">
-                <li><span><i class="uil uil-check"></i></span><span>Etiam porta euismod malesuada mollis nisl ornare.</span></li>
-                <li class="mt-3"><span><i class="uil uil-check"></i></span><span>Vivamus sagittis lacus augue rutrum maecenas odio.</span></li>
-              </ul>
-            </div>
-            <!--/column -->
+          <!-- /column -->
+          <div class="col-7">
+            <img class="img-fluid rounded shadow-lg mb-5" data-cue="fadeIn" data-delay="900"
+              src="{{ $.Site.BaseURL }}img/{{ $information.home.section.four.images.image_three }}"
+              srcset="{{ $.Site.BaseURL }}img/{{ $information.home.section.four.images.image_three }} 2x" alt="" />
+            <img class="img-fluid rounded shadow-lg d-flex col-11" data-cue="fadeIn" data-delay="1200"
+              src="{{ $.Site.BaseURL }}img/{{ $information.home.section.four.images.image_four }}"
+              srcset="{{ $.Site.BaseURL }}img/{{ $information.home.section.four.images.image_four }} 2x" alt="" />
           </div>
-          <!--/.row -->
+          <!-- /column -->
         </div>
-        <!--/column -->
+        <!-- /.row -->
       </div>
-      <!--/.row -->
-    </div>
-    <!-- /.container -->
-  </section>
-  <section class="wrapper bg-light">
-    <div class="container py-12 pb-md-16">
-      <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
-        <div class="col-lg-6 position-relative order-lg-2">
-          <div class="shape rounded bg-pale-green rellax d-block" data-rellax-speed="0" style="top: 50%; left: 50%; width: 50%; height: 60%; transform: translate(-50%,-50%);z-index:0"></div>
-          <div class="row gx-md-5 gy-5 position-relative">
-            <div class="col-5">
-              <img class="img-fluid rounded shadow-lg my-5 d-flex ms-auto" data-cue="fadeIn" data-delay="300" src="{{ .Site.BaseURL }}img/photos//sa9.jpg" srcset="{{ .Site.BaseURL }}img/photos//sa9@2x.jpg 2x" alt="" />
-              <img class="img-fluid rounded shadow-lg d-flex col-10 ms-auto" data-cue="fadeIn" data-delay="600" src="{{ .Site.BaseURL }}img/photos//sa10.jpg" srcset="{{ .Site.BaseURL }}img/photos//sa10@2x.jpg 2x" alt="" />
-            </div>
-            <!-- /column -->
-            <div class="col-7">
-              <img class="img-fluid rounded shadow-lg mb-5" data-cue="fadeIn" data-delay="900" src="{{ .Site.BaseURL }}img/photos//sa11.jpg" srcset="{{ .Site.BaseURL }}img/photos//sa11@2x.jpg 2x" alt="" />
-              <img class="img-fluid rounded shadow-lg d-flex col-11" data-cue="fadeIn" data-delay="1200" src="{{ .Site.BaseURL }}img/photos//sa12.jpg" srcset="{{ .Site.BaseURL }}img/photos//sa12@2x.jpg 2x" alt="" />
-            </div>
-            <!-- /column -->
-          </div>
-          <!-- /.row -->
-        </div>
-        <!--/column -->
-        <div class="col-lg-6">
-          <h3 class="display-4 mb-5">We make spending stress free so you have the perfect control.</h3>
-          <p class="mb-5">Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo.</p>
-          <div class="row gy-3">
-            <div class="col-xl-6">
-              <ul class="icon-list bullet-bg bullet-soft-green mb-0">
-                <li><span><i class="uil uil-check"></i></span><span>Aenean quam ornare curabitur blandit consectetur.</span></li>
-                <li class="mt-3"><span><i class="uil uil-check"></i></span><span>Nullam quis risus eget urna mollis ornare aenean leo.</span></li>
-              </ul>
-            </div>
-            <!--/column -->
-            <div class="col-xl-6">
-              <ul class="icon-list bullet-bg bullet-soft-green mb-0">
-                <li><span><i class="uil uil-check"></i></span><span>Etiam porta euismod malesuada mollis nisl ornare.</span></li>
-                <li class="mt-3"><span><i class="uil uil-check"></i></span><span>Vivamus sagittis lacus augue rutrum maecenas odio.</span></li>
-              </ul>
-            </div>
-            <!--/column -->
-          </div>
-          <!--/.row -->
-        </div>
-        <!--/column -->
-      </div>
-    </div>
-    <!-- /.container -->
-  </section>
-  <section class="wrapper bg-light">
-    <div class="container pb-14 pb-md-12 mb-lg-22 mb-xl-24">
-      <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
-        <div class="col-lg-6 position-relative">
-          <div class="shape rounded bg-pale-yellow rellax d-block" data-rellax-speed="0" style="top: 50%; left: 50%; width: 50%; height: 60%; transform: translate(-50%,-50%);z-index:0"></div>
-          <div class="row gx-md-5 gy-5 position-relative align-items-center">
-            <div class="col-6">
-              <img class="img-fluid rounded shadow-lg d-flex ms-auto" data-cue="fadeIn" data-delay="300" src="{{ .Site.BaseURL }}img/photos//sa13.jpg" srcset="{{ .Site.BaseURL }}img/photos//sa13@2x.jpg 2x" alt="" />
-            </div>
-            <!-- /column -->
-            <div class="col-6">
-              <img class="img-fluid rounded shadow-lg mb-5" data-cue="fadeIn" data-delay="900" src="{{ .Site.BaseURL }}img/photos//sa14.jpg" srcset="{{ .Site.BaseURL }}img/photos//sa14@2x.jpg 2x" alt="" />
-              <img class="img-fluid rounded shadow-lg d-flex col-10" data-cue="fadeIn" data-delay="1200" src="{{ .Site.BaseURL }}img/photos//sa15.jpg" srcset="{{ .Site.BaseURL }}img/photos//sa15@2x.jpg 2x" alt="" />
-            </div>
-            <!-- /column -->
-          </div>
-          <!-- /.row -->
-        </div>
-        <!--/column -->
-        <div class="col-lg-6">
-          <h3 class="display-4 mb-5">We bring solutions to manage your finance the way works best.</h3>
-          <p class="mb-5">Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo.</p>
-          <div class="row gy-3">
-            <div class="col-xl-6">
-              <ul class="icon-list bullet-bg bullet-soft-yellow mb-0">
-                <li><span><i class="uil uil-check"></i></span><span>Aenean quam ornare curabitur blandit consectetur.</span></li>
-                <li class="mt-3"><span><i class="uil uil-check"></i></span><span>Nullam quis risus eget urna mollis ornare aenean leo.</span></li>
-              </ul>
-            </div>
-            <!--/column -->
-            <div class="col-xl-6">
-              <ul class="icon-list bullet-bg bullet-soft-yellow mb-0">
-                <li><span><i class="uil uil-check"></i></span><span>Etiam porta euismod malesuada mollis nisl ornare.</span></li>
-                <li class="mt-3"><span><i class="uil uil-check"></i></span><span>Vivamus sagittis lacus augue rutrum maecenas odio.</span></li>
-              </ul>
-            </div>
-            <!--/column -->
-          </div>
-          <!--/.row -->
-        </div>
-        <!--/column -->
-      </div>
-    </div>
-  </section>
-  <section class="wrapper bg-soft-primary">
-    <div class="container py-14 pt-md-16 pt-lg-0 pb-md-16">
-      <div class="row text-center" data-cue="slideInUp">
-        <div class="col-lg-10 mx-auto">
-          <div class="mt-lg-n20 mt-xl-n22 position-relative">
-            <div class="shape bg-dot red rellax w-16 h-18" data-rellax-speed="1" style="top: 1rem; left: -3.9rem;"></div>
-            <div class="shape rounded-circle bg-line primary rellax w-18 h-18" data-rellax-speed="1" style="bottom: 2rem; right: -3rem;"></div>
-            <video poster="{{ .Site.BaseURL }}img/photos//movie.jpg" class="player" playsinline controls preload="none">
-              <source src="{{ .Site.BaseURL }}media/movie.mp4" type="video/mp4">
-              <source src="{{ .Site.BaseURL }}media/movie.webm" type="video/webm">
-            </video>
-          </div>
-        </div>
-        <!--/column -->
-      </div>
-      <!--/.row -->
-      <div class="row text-center mt-12">
-        <div class="col-lg-9 mx-auto">
-          <h3 class="display-4 mb-0 text-center px-xl-10 px-xxl-15">Find out everything you need to know about creating a business process model</h3>
-          <div class="row gx-lg-8 gx-xl-12 process-wrapper text-center mt-9" data-cues="slideInUp" data-group="process">
-            <div class="col-md-4"> <img src="{{ .Site.BaseURL }}img/icons/shield.svg" class="svg-inject icon-svg icon-svg-md text-red mb-3" alt="" />
-              <h4 class="mb-1">1. Secured Transactions</h4>
-              <p>Etiam porta malesuada magna mollis euismod sem.</p>
-            </div>
-            <!--/column -->
-            <div class="col-md-4"> <img src="{{ .Site.BaseURL }}img/icons/savings.svg" class="svg-inject icon-svg icon-svg-md text-green mb-3" alt="" />
-              <h4 class="mb-1">2. Budget Planning</h4>
-              <p>Etiam porta malesuada magna mollis euismod sem.</p>
-            </div>
-            <!--/column -->
-            <div class="col-md-4"> <img src="{{ .Site.BaseURL }}img/icons/loading.svg" class="svg-inject icon-svg icon-svg-md text-yellow mb-3" alt="" />
-              <h4 class="mb-1">3. Up to Date</h4>
-              <p>Etiam porta malesuada magna mollis euismod sem.</p>
-            </div>
-            <!--/column -->
-          </div>
-          <!--/.row -->
-        </div>
-        <!-- /column -->
-      </div>
-      <!-- /.row -->
-    </div>
-    <!-- /.container -->
-  </section>
-  <section class="wrapper bg-light">
-    <div class="container py-14 py-md-17">
-      <div class="row gx-lg-8 gx-xl-12 gy-6 mb-14 align-items-center">
-        <div class="col-lg-7 position-relative">
-          <div class="shape bg-dot primary rellax w-18 h-18" data-rellax-speed="1" style="top: 0px; left: -1.4rem; z-index: 0; transform: translate3d(0px, -12px, 0px);"></div>
-          <div class="row gx-md-5 gy-5">
-            <div class="col-md-6" data-cue="fadeIn" data-show="true" style="animation-name: fadeIn; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
-              <figure class="rounded mt-md-10 position-relative"><img src="{{ .Site.BaseURL }}img/photos/g5.jpg" srcset="{{ .Site.BaseURL }}img/photos/g5@2x.jpg 2x" alt=""></figure>
-            </div>
-            <!--/column -->
-            <div class="col-md-6">
-              <div class="row gx-md-5 gy-5">
-                <div class="col-md-12 order-md-2" data-cue="fadeIn" data-delay="900" data-show="true" style="animation-name: fadeIn; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">
-                  <figure class="rounded"><img src="{{ .Site.BaseURL }}img/photos/g6.jpg" srcset="{{ .Site.BaseURL }}img/photos/g6@2x.jpg 2x" alt=""></figure>
-                </div>
-                <!--/column -->
-                <div class="col-md-10" data-cue="fadeIn" data-delay="300" data-show="true" style="animation-name: fadeIn; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 600ms; animation-direction: normal; animation-fill-mode: both;">
-                  <div class="card bg-pale-primary text-center">
-                    <div class="card-body py-11 counter-wrapper">
-                      <h3 class="counter text-nowrap" style="visibility: visible;">5000+</h3>
-                      <p class="mb-0">Satisfied Customers</p>
-                    </div>
-                    <!--/.card-body -->
-                  </div>
-                  <!--/.card -->
-                </div>
-                <!--/column -->
-              </div>
-              <!--/.row -->
-            </div>
-            <!--/column -->
-          </div>
-          <!--/.row -->
-        </div>
-        <!--/column -->
-        <div class="col-lg-5 mt-5">
-          <div class="basic-slider owl-carousel gap-small owl-loaded owl-drag" data-margin="30">
-            
-            <!-- /.item -->
-            
-            <!-- /.item -->
-            
-            <!-- /.item -->
-          <div class="owl-stage-outer owl-height" style="height: 316px;"><div class="owl-stage" style="transform: translate3d(-788px, 0px, 0px); transition: all 0s ease 0s; width: 2760px;"><div class="owl-item cloned" style="width: 364.156px; margin-right: 30px;"><div class="item">
-              <blockquote class="icon icon-top fs-lg text-center">
-                <p>“Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum ligula porta felis euismod semper. Cras justo odio consectetur.”</p>
-                <div class="blockquote-details justify-content-center text-center">
-                  <div class="info ps-0">
-                    <h5 class="mb-1">Cory Zamora</h5>
-                    <p class="mb-0">Marketing Specialist</p>
-                  </div>
-                </div>
-              </blockquote>
-            </div></div><div class="owl-item cloned" style="width: 364.156px; margin-right: 30px;"><div class="item">
-              <blockquote class="icon icon-top fs-lg text-center">
-                <p>“Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum ligula porta felis euismod semper. Cras justo odio consectetur.”</p>
-                <div class="blockquote-details justify-content-center text-center">
-                  <div class="info ps-0">
-                    <h5 class="mb-1">Nikolas Brooten</h5>
-                    <p class="mb-0">Sales Manager</p>
-                  </div>
-                </div>
-              </blockquote>
-            </div></div><div class="owl-item active" style="width: 364.156px; margin-right: 30px;"><div class="item">
-              <blockquote class="icon icon-top fs-lg text-center">
-                <p>“Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum ligula porta felis euismod semper. Cras justo odio consectetur.”</p>
-                <div class="blockquote-details justify-content-center text-center">
-                  <div class="info ps-0">
-                    <h5 class="mb-1">Coriss Ambady</h5>
-                    <p class="mb-0">Financial Analyst</p>
-                  </div>
-                </div>
-              </blockquote>
-            </div></div><div class="owl-item" style="width: 364.156px; margin-right: 30px;"><div class="item">
-              <blockquote class="icon icon-top fs-lg text-center">
-                <p>“Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum ligula porta felis euismod semper. Cras justo odio consectetur.”</p>
-                <div class="blockquote-details justify-content-center text-center">
-                  <div class="info ps-0">
-                    <h5 class="mb-1">Cory Zamora</h5>
-                    <p class="mb-0">Marketing Specialist</p>
-                  </div>
-                </div>
-              </blockquote>
-            </div></div><div class="owl-item" style="width: 364.156px; margin-right: 30px;"><div class="item">
-              <blockquote class="icon icon-top fs-lg text-center">
-                <p>“Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum ligula porta felis euismod semper. Cras justo odio consectetur.”</p>
-                <div class="blockquote-details justify-content-center text-center">
-                  <div class="info ps-0">
-                    <h5 class="mb-1">Nikolas Brooten</h5>
-                    <p class="mb-0">Sales Manager</p>
-                  </div>
-                </div>
-              </blockquote>
-            </div></div><div class="owl-item cloned" style="width: 364.156px; margin-right: 30px;"><div class="item">
-              <blockquote class="icon icon-top fs-lg text-center">
-                <p>“Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum ligula porta felis euismod semper. Cras justo odio consectetur.”</p>
-                <div class="blockquote-details justify-content-center text-center">
-                  <div class="info ps-0">
-                    <h5 class="mb-1">Coriss Ambady</h5>
-                    <p class="mb-0">Financial Analyst</p>
-                  </div>
-                </div>
-              </blockquote>
-            </div></div><div class="owl-item cloned" style="width: 364.156px; margin-right: 30px;"><div class="item">
-              <blockquote class="icon icon-top fs-lg text-center">
-                <p>“Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum ligula porta felis euismod semper. Cras justo odio consectetur.”</p>
-                <div class="blockquote-details justify-content-center text-center">
-                  <div class="info ps-0">
-                    <h5 class="mb-1">Cory Zamora</h5>
-                    <p class="mb-0">Marketing Specialist</p>
-                  </div>
-                </div>
-              </blockquote>
-            </div></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><i class="uil-arrow-left"></i></button><button type="button" role="presentation" class="owl-next"><i class="uil-arrow-right"></i></button></div><div class="owl-dots"><button role="button" class="owl-dot active"><span></span></button><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button></div></div>
-          <!-- /.owl-carousel -->
-        </div>
-        <!--/column -->
-      </div>
-      <!--/.row -->
-      <div class="px-lg-5">
-        <div class="row gx-0 gx-md-8 gx-xl-12 gy-8 align-items-center">
-          <div class="col-4 col-md-2">
-            <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ .Site.BaseURL }}img/brands/c1.png" alt=""></figure>
-          </div>
-          <!--/column -->
-          <div class="col-4 col-md-2">
-            <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ .Site.BaseURL }}img/brands/c2.png" alt=""></figure>
-          </div>
-          <!--/column -->
-          <div class="col-4 col-md-2">
-            <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ .Site.BaseURL }}img/brands/c3.png" alt=""></figure>
-          </div>
-          <!--/column -->
-          <div class="col-4 col-md-2">
-            <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ .Site.BaseURL }}img/brands/c4.png" alt=""></figure>
-          </div>
-          <!--/column -->
-          <div class="col-4 col-md-2">
-            <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ .Site.BaseURL }}img/brands/c5.png" alt=""></figure>
-          </div>
-          <!--/column -->
-          <div class="col-4 col-md-2">
-            <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ .Site.BaseURL }}img/brands/c6.png" alt=""></figure>
+      <!--/column -->
+      <div class="col-lg-6">
+        <h3 class="display-4 mb-5">{{ $information.home.section.four.title }}</h3>
+        <p class="mb-5">{{ $information.home.section.four.description }}</p>
+        <div class="row gy-3">
+          <div class="col-xl-12">
+            <ul class="icon-list bullet-bg bullet-soft-green mb-0">
+              {{ range $information.home.section.four.points }}
+              <li>
+                <span><i class="uil uil-check"></i></span>
+                <span>{{ . }}</span>
+              </li>
+              {{ end }}
+            </ul>
           </div>
           <!--/column -->
         </div>
         <!--/.row -->
       </div>
-      <!-- /div -->
+      <!--/column -->
     </div>
-    <!-- /.container -->
-  </section>
-  <section class="wrapper bg-light">
-    <div class="container py-14 py-md-16">
-      <div class="row">
-        <div class="col-lg-10 col-xl-9 col-xxl-8 mx-auto text-center">
-          <h2 class="fs-15 text-uppercase text-muted mb-3">Our Pricing</h2>
-          <h3 class="display-4 mb-15 mb-md-6 px-lg-10">We offer great prices, premium products and quality service for your business.</h3>
+  </div>
+  <!-- /.container -->
+</section>
+
+<section class="wrapper bg-soft-primary">
+  <div class="container py-14 pt-md-16 pt-lg-12 pb-md-16">
+    <!--/.row -->
+    <div class="row text-center mt-12">
+      <div class="col-lg-9 mx-auto">
+        <h3 class="display-4 mb-0 text-center px-xl-10 px-xxl-15">{{ $information.home.section.five.title }}</h3>
+        <div class="row gx-lg-8 gx-xl-12 process-wrapper text-center mt-9" data-cues="slideInUp" data-group="process">
+          {{ range $information.home.section.five.steps }}
+          <div class="col-md-4"> <img src="{{ $.Site.BaseURL }}img/{{ .icon }}" class="svg-inject icon-svg icon-svg-md text-{{ .color }} mb-3" alt="" />
+            <h4 class="mb-1">{{ .title }}</h4>
+            <p>{{ .description }}</p>
+          </div>
+          {{ end }}
+          <!--/column -->
         </div>
-        <!--/column -->
+        <!--/.row -->
       </div>
-      <!--/.row -->
-      <div class="pricing-wrapper position-relative">
-        <div class="shape bg-dot primary rellax w-16 h-18" data-rellax-speed="1" style="top: 2rem; right: -2.4rem;"></div>
-        <div class="shape rounded-circle bg-line red rellax w-18 h-18 d-none d-lg-block" data-rellax-speed="1" style="bottom: 0.5rem; left: -2.5rem;"></div>
-        <div class="pricing-switcher-wrapper switcher">
-          <p class="mb-0 pe-3">Monthly</p>
-          <div class="pricing-switchers">
-            <div class="pricing-switcher pricing-switcher-active"></div>
-            <div class="pricing-switcher"></div>
-            <div class="switcher-button bg-primary"></div>
-          </div>
-          <p class="mb-0 ps-3">Yearly</p>
-        </div>
-        <div class="row gy-6 mt-3 mt-md-5">
-          <div class="col-md-6 col-lg-4">
-            <div class="pricing card text-center">
-              <div class="card-body">
-                <img src="{{ .Site.BaseURL }}img/icons/shopping-basket.svg" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
-                <h4 class="card-title">Basic Plan</h4>
-                <div class="prices text-dark">
-                  <div class="price price-show"><span class="price-currency">$</span><span class="price-value">9</span> <span class="price-duration">month</span></div>
-                  <div class="price price-hide price-hidden"><span class="price-currency">$</span><span class="price-value">99</span> <span class="price-duration">year</span></div>
-                </div>
-                <!--/.prices -->
-                <ul class="icon-list bullet-bg bullet-soft-primary mt-8 mb-9 text-start">
-                  <li><i class="uil uil-check"></i><span><strong>1</strong> Project </span></li>
-                  <li><i class="uil uil-check"></i><span><strong>100K</strong> API Access </span></li>
-                  <li><i class="uil uil-check"></i><span><strong>100MB</strong> Storage </span></li>
-                  <li><i class="uil uil-times bullet-soft-red"></i><span> Weekly <strong>Reports</strong> </span></li>
-                  <li><i class="uil uil-times bullet-soft-red"></i><span> 7/24 <strong>Support</strong></span></li>
-                </ul>
-                <a href="#" class="btn btn-primary rounded-pill">Choose Plan</a>
-              </div>
-              <!--/.card-body -->
-            </div>
-            <!--/.pricing -->
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+
+<section class="wrapper bg-light">
+  <div class="container py-14 py-md-16 pt-md-5">
+    <div class="row gx-lg-8 gx-xl-12 gy-6 align-items-center">
+      <div class="col-lg-7 position-relative">
+        <div class="shape bg-dot primary rellax w-18 h-18" data-rellax-speed="1" style="top: 0; left: -1.4rem; z-index: 0;"></div>
+        <div class="row gx-md-5 gy-5">
+          <div class="col-md-6">
+            <figure class="rounded mt-md-10 position-relative"><img
+              src="{{ $.Site.BaseURL }}img/{{ $information.home.section.six.images.image_one }}"
+              srcset="{{ .Site.BaseURL }}img/{{ $information.home.section.six.images.image_one }} 2x" alt=""></figure>
           </div>
           <!--/column -->
-          <div class="col-md-6 col-lg-4 popular">
-            <div class="pricing card text-center">
-              <div class="card-body">
-                <img src="{{ .Site.BaseURL }}img/icons/home.svg" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
-                <h4 class="card-title">Premium Plan</h4>
-                <div class="prices text-dark">
-                  <div class="price price-show"><span class="price-currency">$</span><span class="price-value">19</span> <span class="price-duration">month</span></div>
-                  <div class="price price-hide price-hidden"><span class="price-currency">$</span><span class="price-value">199</span> <span class="price-duration">year</span></div>
-                </div>
-                <!--/.prices -->
-                <ul class="icon-list bullet-bg bullet-soft-primary mt-8 mb-9 text-start">
-                  <li><i class="uil uil-check"></i><span><strong>5</strong> Projects </span></li>
-                  <li><i class="uil uil-check"></i><span><strong>100K</strong> API Access </span></li>
-                  <li><i class="uil uil-check"></i><span><strong>200MB</strong> Storage </span></li>
-                  <li><i class="uil uil-check"></i><span> Weekly <strong>Reports</strong></span></li>
-                  <li><i class="uil uil-times bullet-soft-red"></i><span> 7/24 <strong>Support</strong></span></li>
-                </ul>
-                <a href="#" class="btn btn-primary rounded-pill">Choose Plan</a>
+          <div class="col-md-6">
+            <div class="row gx-md-5 gy-5">
+              <div class="col-md-12 order-md-2">
+                <figure class="rounded"><img
+                  src="{{ $.Site.BaseURL }}img/{{ $information.home.section.six.images.image_two }}"
+                  srcset="{{ $.Site.BaseURL }}img/{{ $information.home.section.six.images.image_two }} 2x" alt="">
+              </figure>
               </div>
-              <!--/.card-body -->
-            </div>
-            <!--/.pricing -->
-          </div>
-          <!--/column -->
-          <div class="col-md-6 offset-md-3 col-lg-4 offset-lg-0">
-            <div class="pricing card text-center">
-              <div class="card-body">
-                <img src="{{ .Site.BaseURL }}img/icons/briefcase-2.svg" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
-                <h4 class="card-title">Corporate Plan</h4>
-                <div class="prices text-dark">
-                  <div class="price price-show"><span class="price-currency">$</span><span class="price-value">49</span> <span class="price-duration">month</span></div>
-                  <div class="price price-hide price-hidden"><span class="price-currency">$</span><span class="price-value">499</span> <span class="price-duration">year</span></div>
+              <!--/column -->
+              <div class="col-md-10">
+                <div class="card bg-pale-primary text-center">
+                  <div class="card-body py-11 counter-wrapper">
+                    <h3 class="counter text-nowrap" style="visibility: visible;">{{ $information.home.section.six.counts
+                    }}</h3>
+                  <p class="mb-0">{{ $information.home.section.six.counts_title }}</p>
+                  </div>
+                  <!--/.card-body -->
                 </div>
-                <!--/.prices -->
-                <ul class="icon-list bullet-bg bullet-soft-primary mt-8 mb-9 text-start">
-                  <li><i class="uil uil-check"></i><span><strong>20</strong> Projects </span></li>
-                  <li><i class="uil uil-check"></i><span><strong>300K</strong> API Access </span></li>
-                  <li><i class="uil uil-check"></i><span><strong>500MB</strong> Storage </span></li>
-                  <li><i class="uil uil-check"></i><span> Weekly <strong>Reports</strong></span></li>
-                  <li><i class="uil uil-check"></i><span> 7/24 <strong>Support</strong></span></li>
-                </ul>
-                <a href="#" class="btn btn-primary rounded-pill">Choose Plan</a>
+                <!--/.card -->
               </div>
-              <!--/.card-body -->
+              <!--/column -->
             </div>
-            <!--/.pricing -->
+            <!--/.row -->
           </div>
           <!--/column -->
         </div>
         <!--/.row -->
       </div>
-      <!--/.pricing-wrapper -->
-    </div>
-    <!-- /.container -->
-  </section>
-  <!-- /section -->
-  <!-- /section -->
-  <section class="wrapper image-wrapper bg-auto no-overlay bg-image text-center bg-map" data-image-src="{{ .Site.BaseURL }}img/map.png">
-    <div class="container pt-0 pb-14 pt-md-18 pb-md-18">
-      <div class="row">
-        <div class="col-lg-10 col-xl-9 col-xxl-8 mx-auto">
-          <h3 class="display-4 mb-8 px-lg-12">We are trusted by over 5000+ clients. Join them now and grow your business.</h3>
+      <!--/column -->
+      <div class="col-lg-5 mt-5">
+        <div class="basic-slider owl-carousel gap-small" data-margin="30">
+          {{ range $information.home.section.six.testimonials }}
+          <div class="item">
+            <blockquote class="icon icon-top fs-lg text-center">
+              <p>“{{ .text }}”</p>
+              <div class="blockquote-details justify-content-center text-center">
+                <div class="info ps-0">
+                  <h5 class="mb-1">{{ .people }}</h5>
+                  <p class="mb-0">{{ .jobdesk }}</p>
+                </div>
+              </div>
+            </blockquote>
+          </div>
+          {{ end }}
         </div>
-        <!-- /column -->
+        <!-- /.owl-carousel -->
       </div>
-      <!-- /.row -->
-      <div class="d-flex justify-content-center" data-cues="slideInDown" data-group="join">
-        <span><a class="btn btn-primary rounded mx-1">Get Started</a></span>
-        <span><a class="btn btn-yellow rounded mx-1">Free Trial</a></span>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->
+<section class="wrapper bg-light wrapper-border">
+  <div class="container py-14 py-md-16 pt-md-6">
+    <h2 class="fs-15 text-uppercase text-muted text-center mb-8">{{ $information.home.section.seven.client.title }}</h2>
+    <div class="carousel owl-carousel clients mb-0" data-margin="30" data-loop="true" data-dots="false" data-autoplay="true" data-autoplay-timeout="3000" data-responsive='{"0":{"items": "2"}, "768":{"items": "4"}, "992":{"items": "5"}, "1200":{"items": "6"}, "1400":{"items": "7"}}'>
+      {{ range $information.clients.client }}
+      <div class="item px-5"><img src="{{ $.Site.BaseURL }}img/{{ .logo }}" alt="{{ .title }}" /></div>
+      {{ end }}
+    </div>
+  </div>
+  <div class="container py-14 pt-md-1">
+    <h2 class="fs-15 text-uppercase text-muted text-center mb-8">{{ $information.home.section.seven.partners.title }}</h2>
+    <div class="px-lg-5">
+      <div class="row gx-0 gx-md-8 gx-xl-12 gy-8 align-items-center">
+        {{ range $information.partners.partner }}
+        <div class="col-4 col-md-2">
+          <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ $.Site.BaseURL}}img/{{ .logo }}" alt="{{ .title }}"></figure>
+        </div>
+        {{ end }}
       </div>
     </div>
-    <!-- /.container -->
-  </section>
+  </div>
+  <div class="container py-14 pt-md-1">
+    <h2 class="fs-15 text-uppercase text-muted text-center mb-8">{{ $information.home.section.seven.media.title }}</h2>
+    <div class="px-lg-5">
+      <div class="row gx-0 gx-md-8 gx-xl-12 gy-8 align-items-center">
+        {{ range $information.media.media }}
+        <div class="col-4 col-md-2">
+          <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ $.Site.BaseURL}}img/{{ .logo }}" alt="{{ .title }}"></figure>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->
+
+<section class="wrapper bg-light">
+  <div class="container py-14 py-md-16 pt-lg-10">
+    <h2 class="display-4 mb-3 text-center">{{ $information.home.section.eight.title }}</h2>
+    <p class="lead fs-lg mb-10 text-center px-md-16 px-lg-21 px-xl-0">{{ $information.home.section.eight.description }}</p>
+    <div class="carousel owl-carousel blog grid-view" data-margin="30" data-dots="true" data-autoplay="false"
+      data-autoplay-timeout="5000"
+      data-responsive='{"0":{"items": "1"}, "768":{"items": "2"}, "992":{"items": "2"}, "1200":{"items": "3"}}'>
+      <div class="item">
+        <article>
+          <figure class="overlay overlay1 hover-scale rounded mb-5"><a href="#"> <img
+                src="{{ .Site.BaseURL }}img/photos/b4.jpg" alt="" /></a>
+            <figcaption>
+              <h5 class="from-top mb-0">Read More</h5>
+            </figcaption>
+          </figure>
+          <div class="post-header">
+            <div class="post-category text-line">
+              <a href="#" class="hover" rel="category">Coding</a>
+            </div>
+            <!-- /.post-category -->
+            <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="./blog-post.html">Ligula tristique quis
+                risus</a></h2>
+          </div>
+          <!-- /.post-header -->
+          <div class="post-footer">
+            <ul class="post-meta">
+              <li class="post-date"><i class="uil uil-calendar-alt"></i><span>14 Apr 2021</span></li>
+              <li class="post-comments"><a href="#"><i class="uil uil-comment"></i>4</a></li>
+            </ul>
+            <!-- /.post-meta -->
+          </div>
+          <!-- /.post-footer -->
+        </article>
+        <!-- /article -->
+      </div>
+      <!-- /.item -->
+      <div class="item">
+        <article>
+          <figure class="overlay overlay1 hover-scale rounded mb-5"><a href="#"> <img
+                src="{{ .Site.BaseURL }}img/photos/b5.jpg" alt="" /></a>
+            <figcaption>
+              <h5 class="from-top mb-0">Read More</h5>
+            </figcaption>
+          </figure>
+          <div class="post-header">
+            <div class="post-category text-line">
+              <a href="#" class="hover" rel="category">Workspace</a>
+            </div>
+            <!-- /.post-category -->
+            <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="./blog-post.html">Nullam id dolor elit id
+                nibh</a></h2>
+          </div>
+          <!-- /.post-header -->
+          <div class="post-footer">
+            <ul class="post-meta">
+              <li class="post-date"><i class="uil uil-calendar-alt"></i><span>29 Mar 2021</span></li>
+              <li class="post-comments"><a href="#"><i class="uil uil-comment"></i>3</a></li>
+            </ul>
+            <!-- /.post-meta -->
+          </div>
+          <!-- /.post-footer -->
+        </article>
+        <!-- /article -->
+      </div>
+      <!-- /.item -->
+      <div class="item">
+        <article>
+          <figure class="overlay overlay1 hover-scale rounded mb-5"><a href="#"> <img
+                src="{{ .Site.BaseURL }}img/photos/b6.jpg" alt="" /></a>
+            <figcaption>
+              <h5 class="from-top mb-0">Read More</h5>
+            </figcaption>
+          </figure>
+          <div class="post-header">
+            <div class="post-category text-line">
+              <a href="#" class="hover" rel="category">Meeting</a>
+            </div>
+            <!-- /.post-category -->
+            <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="./blog-post.html">Ultricies fusce porta
+                elit</a></h2>
+          </div>
+          <!-- /.post-header -->
+          <div class="post-footer">
+            <ul class="post-meta">
+              <li class="post-date"><i class="uil uil-calendar-alt"></i><span>26 Feb 2021</span></li>
+              <li class="post-comments"><a href="#"><i class="uil uil-comment"></i>6</a></li>
+            </ul>
+            <!-- /.post-meta -->
+          </div>
+          <!-- /.post-footer -->
+        </article>
+        <!-- /article -->
+      </div>
+      <!-- /.item -->
+      <div class="item">
+        <article>
+          <figure class="overlay overlay1 hover-scale rounded mb-5"><a href="#"> <img
+                src="{{ .Site.BaseURL }}img/photos/b7.jpg" alt="" /></a>
+            <figcaption>
+              <h5 class="from-top mb-0">Read More</h5>
+            </figcaption>
+          </figure>
+          <div class="post-header">
+            <div class="post-category text-line">
+              <a href="#" class="hover" rel="category">Business Tips</a>
+            </div>
+            <!-- /.post-category -->
+            <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="./blog-post.html">Morbi leo risus porta
+                eget</a></h2>
+          </div>
+          <div class="post-footer">
+            <ul class="post-meta">
+              <li class="post-date"><i class="uil uil-calendar-alt"></i><span>7 Jan 2021</span></li>
+              <li class="post-comments"><a href="#"><i class="uil uil-comment"></i>2</a></li>
+            </ul>
+            <!-- /.post-meta -->
+          </div>
+          <!-- /.post-footer -->
+        </article>
+        <!-- /article -->
+      </div>
+      <!-- /.item -->
+    </div>
+    <!-- /.owl-carousel -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->
