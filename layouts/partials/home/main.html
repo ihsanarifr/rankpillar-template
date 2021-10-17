@@ -5,15 +5,15 @@
       <div class="col-md-10 offset-md-1 offset-lg-0 col-lg-5 mt-lg-n2 text-center text-lg-start order-2 order-lg-0"
         data-cues="slideInDown" data-group="page-title" data-delay="600">
         <h1 class="display-1 mb-5 mx-md-10 mx-lg-0">
-          {{ $information.home.section.one.title }}<br />
+          {{ $information.home.one.title }}<br />
           <span class="typer text-primary text-nowrap" data-delay="100" data-delim=":"
-            data-words="{{ $information.home.section.one.title_running }}"></span><span class="cursor text-primary"
+            data-words="{{ $information.home.one.title_running }}"></span><span class="cursor text-primary"
             data-owner="typer"></span>
         </h1>
-        <p class="lead fs-lg mb-7">{{ $information.home.section.one.short_description }}</p>
+        <p class="lead fs-lg mb-7">{{ $information.home.one.short_description }}</p>
         <div class="d-flex justify-content-center justify-content-lg-start" data-cues="slideInDown"
           data-group="page-title-buttons" data-delay="900">
-          {{ range $information.home.section.one.button }}
+          {{ range $information.home.one.button }}
           <span><a href="{{ .link }}" class="btn btn-lg btn-{{ .color }} rounded me-2">{{ .title }}</a></span>
           {{ end }}
         </div>
@@ -24,30 +24,30 @@
           <div class="col-3 offset-1 offset-lg-0 col-lg-4 d-flex flex-column" data-cues="zoomIn" data-group="col-start"
             data-delay="300">
             <div class="ms-auto mt-auto"><img class="img-fluid rounded shadow-lg"
-                src="{{ $.Site.BaseURL }}img/{{ $information.home.section.one.images.image_one }}"
-                srcset="{{ $.Site.BaseURL }}img/{{ $information.home.section.one.images.image_one }} 2x" alt="" /></div>
+                src="{{ $.Site.BaseURL }}img/{{ $information.home.one.images.image_one }}"
+                srcset="{{ $.Site.BaseURL }}img/{{ $information.home.one.images.image_one }} 2x" alt="" /></div>
             <div class="ms-auto mt-5 mb-10"><img class="img-fluid rounded shadow-lg"
-                src="{{ $.Site.BaseURL }}img/{{ $information.home.section.one.images.image_two }}"
-                srcset="{{ $.Site.BaseURL }}img/{{ $information.home.section.one.images.image_two }} 2x" alt="" /></div>
+                src="{{ $.Site.BaseURL }}img/{{ $information.home.one.images.image_two }}"
+                srcset="{{ $.Site.BaseURL }}img/{{ $information.home.one.images.image_two }} 2x" alt="" /></div>
           </div>
           <!-- /column -->
           <div class="col-4 col-lg-5" data-cue="zoomIn">
             <div><img class="w-100 img-fluid rounded shadow-lg"
-                src="{{ $.Site.BaseURL }}img/{{ $information.home.section.one.images.image_three }}"
-                srcset="{{ $.Site.BaseURL }}img/{{ $information.home.section.one.images.image_three }} 2x" alt="" />
+                src="{{ $.Site.BaseURL }}img/{{ $information.home.one.images.image_three }}"
+                srcset="{{ $.Site.BaseURL }}img/{{ $information.home.one.images.image_three }} 2x" alt="" />
             </div>
           </div>
           <!-- /column -->
           <div class="col-3 d-flex flex-column" data-cues="zoomIn" data-group="col-end" data-delay="300">
             <div class="mt-auto"><img class="img-fluid rounded shadow-lg"
-                src="{{ $.Site.BaseURL }}img/{{ $information.home.section.one.images.image_four }}"
-                srcset="{{ .Site.BaseURL }}img/{{ $information.home.section.one.images.image_four }} 2x" alt="" /></div>
+                src="{{ $.Site.BaseURL }}img/{{ $information.home.one.images.image_four }}"
+                srcset="{{ .Site.BaseURL }}img/{{ $information.home.one.images.image_four }} 2x" alt="" /></div>
             <div class="mt-5"><img class="img-fluid rounded shadow-lg"
-                src="{{ $.Site.BaseURL }}img/{{ $information.home.section.one.images.image_five }}"
-                srcset="{{ .Site.BaseURL }}img/{{ $information.home.section.one.images.image_five }} 2x" alt="" /></div>
+                src="{{ $.Site.BaseURL }}img/{{ $information.home.one.images.image_five }}"
+                srcset="{{ .Site.BaseURL }}img/{{ $information.home.one.images.image_five }} 2x" alt="" /></div>
             <div class="mt-5 mb-10"><img class="img-fluid rounded shadow-lg"
-                src="{{ $.Site.BaseURL }}img/{{ $information.home.section.one.images.image_six }}"
-                srcset="{{ .Site.BaseURL }}img/{{ $information.home.section.one.images.image_six }} 2x" alt="" /></div>
+                src="{{ $.Site.BaseURL }}img/{{ $information.home.one.images.image_six }}"
+                srcset="{{ .Site.BaseURL }}img/{{ $information.home.one.images.image_six }} 2x" alt="" /></div>
           </div>
           <!-- /column -->
         </div>
@@ -66,15 +66,15 @@
     <!-- /div -->
     <div class="row">
       <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 mx-auto text-center">
-        <h2 class="fs-15 text-uppercase text-muted mb-3">{{ $information.home.section.two.top_title }}</h2>
-        <h3 class="display-4 mb-10 px-xl-10 px-xxl-15">{{ $information.home.section.two.title }}</h3>
+        <h2 class="fs-15 text-uppercase text-muted mb-3">{{ $information.home.two.top_title }}</h2>
+        <h3 class="display-4 mb-10 px-xl-10 px-xxl-15">{{ $information.home.two.title }}</h3>
       </div>
       <!-- /column -->
     </div>
     <!-- /.row -->
     <ul
       class="nav nav-tabs nav-tabs-bg nav-tabs-shadow-lg d-flex justify-content-between nav-justified flex-lg-row flex-column">
-      {{ range $information.home.section.two.widgets}}
+      {{ range $information.home.two.widgets}}
       <li class="nav-item"> <a class="nav-link d-flex flex-row active" data-bs-toggle="tab">
           <div><img src="{{ $.Site.BaseURL }}img/{{ .icon }}"
               class="svg-inject icon-svg icon-svg-md text-{{ .color }} me-4" alt="" /></div>
@@ -99,20 +99,20 @@
         <div class="row gx-md-5 gy-5 position-relative">
           <div class="col-6">
             <img class="img-fluid rounded shadow-lg mb-5"
-              src="{{ $.Site.BaseURL }}img/{{ $information.home.section.three.images.image_one }}"
-              srcset="{{ $.Site.BaseURL }}img/{{ $information.home.section.three.images.image_one }} 2x" alt="" />
+              src="{{ $.Site.BaseURL }}img/{{ $information.home.three.images.image_one }}"
+              srcset="{{ $.Site.BaseURL }}img/{{ $information.home.three.images.image_one }} 2x" alt="" />
             <img class="img-fluid rounded shadow-lg d-flex col-10 ms-auto"
-              src="{{ $.Site.BaseURL }}img/{{ $information.home.section.three.images.image_two }}"
-              srcset="{{ $.Site.BaseURL }}img/{{ $information.home.section.three.images.image_two }} 2x" alt="" />
+              src="{{ $.Site.BaseURL }}img/{{ $information.home.three.images.image_two }}"
+              srcset="{{ $.Site.BaseURL }}img/{{ $information.home.three.images.image_two }} 2x" alt="" />
           </div>
           <!-- /column -->
           <div class="col-6">
             <img class="img-fluid rounded shadow-lg my-5"
-              src="{{ $.Site.BaseURL }}img/{{ $information.home.section.three.images.image_three }}"
-              srcset="{{ $.Site.BaseURL }}img/{{ $information.home.section.three.images.image_three }} 2x" alt="" />
+              src="{{ $.Site.BaseURL }}img/{{ $information.home.three.images.image_three }}"
+              srcset="{{ $.Site.BaseURL }}img/{{ $information.home.three.images.image_three }} 2x" alt="" />
             <img class="img-fluid rounded shadow-lg d-flex col-10"
-              src="{{ $.Site.BaseURL }}img/{{ $information.home.section.three.images.image_four }}"
-              srcset="{{ $.Site.BaseURL }}img/{{ $information.home.section.three.images.image_four }} 2x" alt="" />
+              src="{{ $.Site.BaseURL }}img/{{ $information.home.three.images.image_four }}"
+              srcset="{{ $.Site.BaseURL }}img/{{ $information.home.three.images.image_four }} 2x" alt="" />
           </div>
           <!-- /column -->
         </div>
@@ -120,12 +120,12 @@
       </div>
       <!--/column -->
       <div class="col-lg-6">
-        <h3 class="display-4 mb-5">{{ $information.home.section.three.title }}</h3>
-        <p class="mb-5">{{ $information.home.section.three.description }}</p>
+        <h3 class="display-4 mb-5">{{ $information.home.three.title }}</h3>
+        <p class="mb-5">{{ $information.home.three.description }}</p>
         <div class="row gy-3">
           <div class="col-xl-12">
             <ul class="icon-list bullet-bg bullet-soft-red mb-0">
-              {{ range $information.home.section.three.points }}
+              {{ range $information.home.three.points }}
               <li>
                 <span><i class="uil uil-check"></i></span>
                 <span>{{ . }}</span>
@@ -152,20 +152,20 @@
         <div class="row gx-md-5 gy-5 position-relative">
           <div class="col-5">
             <img class="img-fluid rounded shadow-lg my-5 d-flex ms-auto" data-cue="fadeIn" data-delay="300"
-              src="{{ $.Site.BaseURL }}img/{{ $information.home.section.four.images.image_one }}"
-              srcset="{{ $.Site.BaseURL }}img/{{ $information.home.section.four.images.image_one }} 2x" alt="" />
+              src="{{ $.Site.BaseURL }}img/{{ $information.home.four.images.image_one }}"
+              srcset="{{ $.Site.BaseURL }}img/{{ $information.home.four.images.image_one }} 2x" alt="" />
             <img class="img-fluid rounded shadow-lg d-flex col-10 ms-auto" data-cue="fadeIn" data-delay="600"
-              src="{{ $.Site.BaseURL }}img/{{ $information.home.section.four.images.image_two }}"
-              srcset="{{ $.Site.BaseURL }}img/{{ $information.home.section.four.images.image_two }} 2x" alt="" />
+              src="{{ $.Site.BaseURL }}img/{{ $information.home.four.images.image_two }}"
+              srcset="{{ $.Site.BaseURL }}img/{{ $information.home.four.images.image_two }} 2x" alt="" />
           </div>
           <!-- /column -->
           <div class="col-7">
             <img class="img-fluid rounded shadow-lg mb-5" data-cue="fadeIn" data-delay="900"
-              src="{{ $.Site.BaseURL }}img/{{ $information.home.section.four.images.image_three }}"
-              srcset="{{ $.Site.BaseURL }}img/{{ $information.home.section.four.images.image_three }} 2x" alt="" />
+              src="{{ $.Site.BaseURL }}img/{{ $information.home.four.images.image_three }}"
+              srcset="{{ $.Site.BaseURL }}img/{{ $information.home.four.images.image_three }} 2x" alt="" />
             <img class="img-fluid rounded shadow-lg d-flex col-11" data-cue="fadeIn" data-delay="1200"
-              src="{{ $.Site.BaseURL }}img/{{ $information.home.section.four.images.image_four }}"
-              srcset="{{ $.Site.BaseURL }}img/{{ $information.home.section.four.images.image_four }} 2x" alt="" />
+              src="{{ $.Site.BaseURL }}img/{{ $information.home.four.images.image_four }}"
+              srcset="{{ $.Site.BaseURL }}img/{{ $information.home.four.images.image_four }} 2x" alt="" />
           </div>
           <!-- /column -->
         </div>
@@ -173,12 +173,12 @@
       </div>
       <!--/column -->
       <div class="col-lg-6">
-        <h3 class="display-4 mb-5">{{ $information.home.section.four.title }}</h3>
-        <p class="mb-5">{{ $information.home.section.four.description }}</p>
+        <h3 class="display-4 mb-5">{{ $information.home.four.title }}</h3>
+        <p class="mb-5">{{ $information.home.four.description }}</p>
         <div class="row gy-3">
           <div class="col-xl-12">
             <ul class="icon-list bullet-bg bullet-soft-green mb-0">
-              {{ range $information.home.section.four.points }}
+              {{ range $information.home.four.points }}
               <li>
                 <span><i class="uil uil-check"></i></span>
                 <span>{{ . }}</span>
@@ -201,9 +201,9 @@
     <!--/.row -->
     <div class="row text-center mt-12">
       <div class="col-lg-9 mx-auto">
-        <h3 class="display-4 mb-0 text-center px-xl-10 px-xxl-15">{{ $information.home.section.five.title }}</h3>
+        <h3 class="display-4 mb-0 text-center px-xl-10 px-xxl-15">{{ $information.home.five.title }}</h3>
         <div class="row gx-lg-8 gx-xl-12 process-wrapper text-center mt-9" data-cues="slideInUp" data-group="process">
-          {{ range $information.home.section.five.steps }}
+          {{ range $information.home.five.steps }}
           <div class="col-md-4"> <img src="{{ $.Site.BaseURL }}img/{{ .icon }}" class="svg-inject icon-svg icon-svg-md text-{{ .color }} mb-3" alt="" />
             <h4 class="mb-1">{{ .title }}</h4>
             <p>{{ .description }}</p>
@@ -228,25 +228,25 @@
         <div class="row gx-md-5 gy-5">
           <div class="col-md-6">
             <figure class="rounded mt-md-10 position-relative"><img
-              src="{{ $.Site.BaseURL }}img/{{ $information.home.section.six.images.image_one }}"
-              srcset="{{ .Site.BaseURL }}img/{{ $information.home.section.six.images.image_one }} 2x" alt=""></figure>
+              src="{{ $.Site.BaseURL }}img/{{ $information.home.six.images.image_one }}"
+              srcset="{{ .Site.BaseURL }}img/{{ $information.home.six.images.image_one }} 2x" alt=""></figure>
           </div>
           <!--/column -->
           <div class="col-md-6">
             <div class="row gx-md-5 gy-5">
               <div class="col-md-12 order-md-2">
                 <figure class="rounded"><img
-                  src="{{ $.Site.BaseURL }}img/{{ $information.home.section.six.images.image_two }}"
-                  srcset="{{ $.Site.BaseURL }}img/{{ $information.home.section.six.images.image_two }} 2x" alt="">
+                  src="{{ $.Site.BaseURL }}img/{{ $information.home.six.images.image_two }}"
+                  srcset="{{ $.Site.BaseURL }}img/{{ $information.home.six.images.image_two }} 2x" alt="">
               </figure>
               </div>
               <!--/column -->
               <div class="col-md-10">
                 <div class="card bg-pale-primary text-center">
                   <div class="card-body py-11 counter-wrapper">
-                    <h3 class="counter text-nowrap" style="visibility: visible;">{{ $information.home.section.six.counts
+                    <h3 class="counter text-nowrap" style="visibility: visible;">{{ $information.home.six.counts
                     }}</h3>
-                  <p class="mb-0">{{ $information.home.section.six.counts_title }}</p>
+                  <p class="mb-0">{{ $information.home.six.counts_title }}</p>
                   </div>
                   <!--/.card-body -->
                 </div>
@@ -263,7 +263,7 @@
       <!--/column -->
       <div class="col-lg-5 mt-5">
         <div class="basic-slider owl-carousel gap-small" data-margin="30">
-          {{ range $information.home.section.six.testimonials }}
+          {{ range $information.home.six.testimonials }}
           <div class="item">
             <blockquote class="icon icon-top fs-lg text-center">
               <p>“{{ .text }}”</p>
@@ -288,7 +288,7 @@
 <!-- /section -->
 <section class="wrapper bg-light wrapper-border">
   <div class="container py-14 py-md-16 pt-md-6">
-    <h2 class="fs-15 text-uppercase text-muted text-center mb-8">{{ $information.home.section.seven.client.title }}</h2>
+    <h2 class="fs-15 text-uppercase text-muted text-center mb-8">{{ $information.home.seven.client.title }}</h2>
     <div class="carousel owl-carousel clients mb-0" data-margin="30" data-loop="true" data-dots="false" data-autoplay="true" data-autoplay-timeout="3000" data-responsive='{"0":{"items": "2"}, "768":{"items": "4"}, "992":{"items": "5"}, "1200":{"items": "6"}, "1400":{"items": "7"}}'>
       {{ range $information.clients.client }}
       <div class="item px-5"><img src="{{ $.Site.BaseURL }}img/{{ .logo }}" alt="{{ .title }}" /></div>
@@ -296,7 +296,7 @@
     </div>
   </div>
   <div class="container py-14 pt-md-1">
-    <h2 class="fs-15 text-uppercase text-muted text-center mb-8">{{ $information.home.section.seven.partners.title }}</h2>
+    <h2 class="fs-15 text-uppercase text-muted text-center mb-8">{{ $information.home.seven.partners.title }}</h2>
     <div class="px-lg-5">
       <div class="row gx-0 gx-md-8 gx-xl-12 gy-8 align-items-center">
         {{ range $information.partners.partner }}
@@ -308,7 +308,7 @@
     </div>
   </div>
   <div class="container py-14 pt-md-1">
-    <h2 class="fs-15 text-uppercase text-muted text-center mb-8">{{ $information.home.section.seven.media.title }}</h2>
+    <h2 class="fs-15 text-uppercase text-muted text-center mb-8">{{ $information.home.seven.media.title }}</h2>
     <div class="px-lg-5">
       <div class="row gx-0 gx-md-8 gx-xl-12 gy-8 align-items-center">
         {{ range $information.media.media }}
@@ -325,8 +325,8 @@
 
 <section class="wrapper bg-light">
   <div class="container py-14 py-md-16 pt-lg-10">
-    <h2 class="display-4 mb-3 text-center">{{ $information.home.section.eight.title }}</h2>
-    <p class="lead fs-lg mb-10 text-center px-md-16 px-lg-21 px-xl-0">{{ $information.home.section.eight.description }}</p>
+    <h2 class="display-4 mb-3 text-center">{{ $information.home.eight.title }}</h2>
+    <p class="lead fs-lg mb-10 text-center px-md-16 px-lg-21 px-xl-0">{{ $information.home.eight.description }}</p>
     <div class="carousel owl-carousel blog grid-view" data-margin="30" data-dots="true" data-autoplay="false"
       data-autoplay-timeout="5000"
       data-responsive='{"0":{"items": "1"}, "768":{"items": "2"}, "992":{"items": "2"}, "1200":{"items": "3"}}'>
