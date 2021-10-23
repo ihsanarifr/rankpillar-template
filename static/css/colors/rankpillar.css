@@ -214,6 +214,10 @@ blockquote,
   background-color: #f0f1f2 !important;
 }
 
+.bg-soft-rankpillar {
+    background-color: #4c9ff529 !important;  
+}
+
 .bg-pale-primary {
   background-color: #dfe0e3 !important;
 }
