@@ -307,7 +307,7 @@
       data-responsive='{"0":{"items": "1"}, "768":{"items": "2"}, "992":{"items": "2"}, "1200":{"items": "3"}}'>
       <!-- Groups content according to content section.-->
       {{ range (where .Site.Pages "Section" "blog") }}
-        {{ range first 4 .Pages }}
+        {{ range first $information.home.eight.paginate .Pages }}
             <div class="item">
               <article>
                 {{ if .Params.featured_image }}
@@ -358,8 +358,8 @@
   <div class="container py-14 pt-md-1">
     <h2 class="fs-15 text-uppercase text-muted text-center mb-8">{{ $information.home.seven.partners.title }}</h2>
     <div class="px-lg-5">
-      <div class="row gx-0 gx-md-8 gx-xl-12 gy-8 align-items-center">
-        {{ range $information.partners.partner }}
+      <div class="row gx-0 gx-md-8 gx-xl-12 gy-8 align-items-center justify-content-center">
+        {{ range first $information.home.seven.partners.limit_show $information.partners.partner }}
         <div class="col-4 col-md-2">
           <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ $.Site.BaseURL }}{{ .logo }}" alt="{{ .title }}"></figure>
         </div>
@@ -370,8 +370,8 @@
   <div class="container py-14 pt-md-1">
     <h2 class="fs-15 text-uppercase text-muted text-center mb-8">{{ $information.home.seven.media.title }}</h2>
     <div class="px-lg-5">
-      <div class="row gx-0 gx-md-8 gx-xl-12 gy-8 align-items-center">
-        {{ range $information.media.media }}
+      <div class="row gx-0 gx-md-8 gx-xl-12 gy-8 align-items-center justify-content-center">
+        {{ range first $information.home.seven.media.limit_show $information.media.media }}
         <div class="col-4 col-md-2">
           <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ $.Site.BaseURL }}{{ .logo }}" alt="{{ .title }}"></figure>
         </div>
