@@ -15,7 +15,10 @@
 	<!-- /.content-wrapper -->
 	<!-- /.content-wrapper -->
 	<footer class="bg-dark text-inverse">
-		{{ partial "footer.html" . }}
+		<div class="container py-13 py-md-12">
+			{{ block "footer" . }}{{ end }}
+			{{ partial "footer.html" . }}
+		</div>
 	</footer>
 	{{ partial "page-progress.html" . }}
 	{{ partial "scripts.html" . }}

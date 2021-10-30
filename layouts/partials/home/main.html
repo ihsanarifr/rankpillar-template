@@ -314,21 +314,21 @@
                 <figure class="overlay overlay1 hover-scale rounded mb-5"><a href="{{ .Permalink }}"> <img
                       src="{{ $.Site.BaseURL }}{{ .Params.featured_image }}" alt="" /></a>
                   <figcaption>
-                    <h5 class="from-top mb-0">Selengkapnya</h5>
+                    <h5 class="from-top mb-0">{{ i18n "read_more" }}</h5>
                   </figcaption>
                 </figure>
                 {{ else }}
                 <figure class="overlay overlay1 hover-scale rounded mb-5"><a href="{{ .Permalink }}"> <img
                   src="{{ $.Site.BaseURL }}photos/b4.jpg" alt="" /></a>
                 <figcaption>
-                  <h5 class="from-top mb-0">Selengkapnya</h5>
+                  <h5 class="from-top mb-0">{{ i18n "read_more" }}</h5>
                 </figcaption>
               </figure>
                 {{ end }}
                 <div class="post-header">
                   <div class="post-category text-line">
                     {{ range .Params.categories }}
-                      <a href="{{ $.Site.BaseURL }}blog/categories/{{ . | urlize }}" class="hover" rel="category">{{ . }}</a>
+                      <a href="#" class="hover" rel="category">{{ . }}</a>
                     {{ end }}
                   </div>
                   <!-- /.post-category -->

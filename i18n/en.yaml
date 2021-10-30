@@ -1,2 +1,8 @@
 home:
   other: 'Home'
+blog_title:
+  other: 'Knowledge Base'
+blog_button_text:
+  other: 'View All News'
+blog_read_more:
+  other: 'Read More'

@@ -1,2 +1,8 @@
 home:
-  other: Beranda
+  other: 'Beranda'
+blog_title:
+  other: 'Knowledge Base'
+blog_button_text:
+  other: 'Tampilkan Semua'
+blog_read_more:
+  other: "Selengkapnya"
