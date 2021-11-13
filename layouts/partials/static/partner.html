@@ -1,7 +1,6 @@
-{{ define "main" }}
 {{ $data := index .Site.Data .Site.Language.Lang }}
 <section class="wrapper bg-light wrapper-border">
-    <div class="container py-14 py-md-16">
+    <div class="container py-12 py-md-12">
         <div class="row gx-lg-8 gx-xl-12 gy-10 gy-lg-0">
             <div class="col-lg-4 mt-lg-2">
                 <h2 class="fs-15 text-uppercase text-muted mb-3">{{ .Params.sub_title }}</h2>
@@ -13,7 +12,8 @@
                 <div class="row row-cols-2 row-cols-md-4 gx-0 gx-md-8 gx-xl-12 gy-12">
                     {{ range $data.partners.partner }}
                     <div class="col">
-                        <figure class="px-3 px-md-0 px-xxl-2"><img src="{{ $.Site.BaseURL }}{{ .logo_color }}" alt="{{ .title }}"></figure>
+                        <figure class="px-3 px-md-0 px-xxl-2"><img src="{{ $.Site.BaseURL }}{{ .logo_color }}"
+                                alt="{{ .title }}"></figure>
                     </div>
                     {{ end }}
                 </div>
@@ -25,4 +25,3 @@
     </div>
     <!-- /.container -->
 </section>
-{{ end }}

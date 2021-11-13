@@ -1,7 +1,6 @@
-{{ define "main" }}
 {{ $data := index .Site.Data .Site.Language.Lang }}
 <section class="wrapper bg-light wrapper-border">
-    <div class="container py-14 py-md-16">
+    <div class="container py-12 py-md-12">
         <h2 class="fs-15 text-uppercase text-muted mb-3">{{ .Params.sub_title }}</h2>
         <div class="row gx-lg-8 mb-10 gy-5">
             <div class="col-lg-6">
@@ -19,7 +18,8 @@
             <div class="col">
                 <div class="card shadow-lg h-100 align-items-center">
                     <div class="card-body align-items-center d-flex px-3 py-6 p-md-8">
-                        <figure class="px-md-3 mb-0"><img src="{{ $.Site.BaseURL }}{{ .logo_color }}" alt="{{ .title }}"></figure>
+                        <figure class="px-md-3 mb-0"><img src="{{ $.Site.BaseURL }}{{ .logo_color }}"
+                                alt="{{ .title }}"></figure>
                     </div>
                     <!--/.card-body -->
                 </div>
@@ -32,4 +32,3 @@
     </div>
     <!-- /.container -->
 </section>
-{{ end }}
