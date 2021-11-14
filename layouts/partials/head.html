@@ -1,6 +1,12 @@
+{{ $meta := index .Site.Data .Site.Language.Lang }}
+<title>{{ .Title | default .Site.Title }}</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{ .Title | default .Site.Title }}</title>
+<meta name="description" content="{{ if .Params.Description }}{{ .Params.Description }}{{ else if .Site.Params.Description }}{{ .Site.Params.Description }}{{ else if $meta.home.meta_description }}{{ $meta.home.meta_description }}{{ else }} rankpillar {{ end }}" /> 
+<meta name="keywords" content="{{ if .Site.Params.tags }}{{ with .Site.Params.tags }}{{ delimit . ", "}}{{ end }}{{ else if $meta.home.meta_tags }}{{ with $meta.home.meta_tags}}{{ delimit . ", "}}{{ end }}{{ end }}" />
+<link rel="canonical" href="{{ .Permalink }}" />
 <link rel="shortcut icon" href="{{ $.Site.BaseURL }}rankpillar-icon.png">
 <link rel="stylesheet" href="{{ $.Site.BaseURL }}css/plugins.css">
 <link rel="stylesheet" href="{{ $.Site.BaseURL }}css/style.css">
+<link rel="preload" href="{{ $.Site.BaseURL }}css/colors/rankpillar.css" as="style" onload="this.rel='stylesheet'">
+<link rel="preload" href="{{ $.Site.BaseURL }}css/fonts/thicccboi.css" as="style" onload="this.rel='stylesheet'">
