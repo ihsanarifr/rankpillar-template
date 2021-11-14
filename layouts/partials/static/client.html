@@ -18,8 +18,15 @@
             <div class="col">
                 <div class="card shadow-lg h-100 align-items-center">
                     <div class="card-body align-items-center d-flex px-3 py-6 p-md-8">
+                        {{ if .url }}
+                        <a href="{{ .url }}" title="{{ .title }}" target="_blank">
+                            <figure class="px-md-3 mb-0"><img src="{{ $.Site.BaseURL }}{{ .logo_color }}"
+                                    alt="{{ .title }}"></figure>
+                        </a>
+                        {{ else }}
                         <figure class="px-md-3 mb-0"><img src="{{ $.Site.BaseURL }}{{ .logo_color }}"
-                                alt="{{ .title }}"></figure>
+                                alt="{{ .title }}">
+                        {{ end }}
                     </div>
                     <!--/.card-body -->
                 </div>

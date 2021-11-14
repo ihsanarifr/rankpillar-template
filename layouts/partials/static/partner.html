@@ -12,8 +12,15 @@
                 <div class="row row-cols-2 row-cols-md-4 gx-0 gx-md-8 gx-xl-12 gy-12">
                     {{ range $data.partners.partner }}
                     <div class="col">
-                        <figure class="px-3 px-md-0 px-xxl-2"><img src="{{ $.Site.BaseURL }}{{ .logo_color }}"
-                                alt="{{ .title }}"></figure>
+                        {{ if .url }}
+                        <a href="{{ .url }}" title="{{ .title }}" target="_blank">
+                            <figure class="px-md-3 mb-0"><img src="{{ $.Site.BaseURL }}{{ .logo_color }}"
+                                    alt="{{ .title }}"></figure>
+                        </a>
+                        {{ else }}
+                        <figure class="px-md-3 mb-0"><img src="{{ $.Site.BaseURL }}{{ .logo_color }}"
+                                alt="{{ .title }}">
+                        {{ end }}
                     </div>
                     {{ end }}
                 </div>

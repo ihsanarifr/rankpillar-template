@@ -361,7 +361,13 @@
       <div class="row gx-0 gx-md-8 gx-xl-12 gy-8 align-items-center justify-content-center">
         {{ range first $information.home.seven.partners.limit_show $information.partners.partner }}
         <div class="col-4 col-md-2">
+          {{ if .url }}
+            <a href="{{ .url }}" title="{{ .title }}" target="_blank">
+              <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ $.Site.BaseURL }}{{ .logo }}" alt="{{ .title }}"></figure>
+            </a>
+          {{ else }}
           <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ $.Site.BaseURL }}{{ .logo }}" alt="{{ .title }}"></figure>
+          {{ end }}
         </div>
         {{ end }}
       </div>
@@ -373,7 +379,13 @@
       <div class="row gx-0 gx-md-8 gx-xl-12 gy-8 align-items-center justify-content-center">
         {{ range first $information.home.seven.media.limit_show $information.media.media }}
         <div class="col-4 col-md-2">
+          {{ if .url }}
+            <a href="{{ .url }}" title="{{ .title }}" target="_blank">
+              <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ $.Site.BaseURL }}{{ .logo }}" alt="{{ .title }}"></figure>
+            </a>
+          {{ else }}
           <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ $.Site.BaseURL }}{{ .logo }}" alt="{{ .title }}"></figure>
+          {{ end }}
         </div>
         {{ end }}
       </div>
