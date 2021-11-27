@@ -96,7 +96,7 @@
     </div>
 </section>
 
-{{ if .Params.media.show }}
+{{ if .Params.show_media }}
     {{ if eq .Params.media.type "client" }}
     {{ partial "services/client.html" . }}
     {{ else if eq .Params.media.type "partner" }}
