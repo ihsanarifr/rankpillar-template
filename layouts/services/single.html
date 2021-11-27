@@ -95,6 +95,17 @@
         <!--/.row -->
     </div>
 </section>
+
+{{ if .Params.media.show }}
+    {{ if eq .Params.media.type "client" }}
+    {{ partial "services/client.html" . }}
+    {{ else if eq .Params.media.type "partner" }}
+    {{ partial "services/partner.html" . }}
+    {{ else if eq .Params.media.type "media" }}
+        {{ partial "services/media.html" . }}
+    {{ end }}
+{{ end }}
+
 {{ end }}
 
 {{ define "footer" }}
