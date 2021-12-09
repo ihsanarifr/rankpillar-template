@@ -139,6 +139,12 @@ p {
   margin-bottom: 1rem;
 }
 
+p.service {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 4;
+}
+
 abbr[title],
 abbr[data-bs-original-title] {
   -webkit-text-decoration: underline dotted;
@@ -5386,6 +5392,10 @@ textarea.form-control.is-invalid {
 .card-body {
   flex: 1 1 auto;
   padding: 2rem 2rem;
+}
+
+.card-body  > ol {
+  list-style-type: circle;
 }
 
 .card-title {
@@ -38896,6 +38906,18 @@ video.player {
   position: relative;
 }
 
+.post-content > ul {
+  list-style-type: circle;
+}
+
+.post-content > ol {
+  list-style-type: circle;
+}
+
+.post-content > p {
+  line-height: 2;
+}
+
 @media (min-width: 768px) {
   .classic-view article .card-body {
     padding: 2rem 2.5rem 1.25rem;
@@ -39345,4 +39367,8 @@ footer.bg-dark.angled.upper-start:before {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.service > p {
+  line-height: 2;
 }
