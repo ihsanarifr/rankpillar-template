@@ -75,14 +75,14 @@
     <ul
       class="nav nav-tabs nav-tabs-bg nav-tabs-shadow-lg d-flex justify-content-between nav-justified flex-lg-row flex-column">
       {{ range $information.home.two.widgets}}
-      <li class="nav-item"> <a class="nav-link d-flex flex-row active" data-bs-toggle="tab">
+      <li class="nav-item"> <i class="nav-link d-flex flex-row active" data-bs-toggle="tab">
           <div><img src="{{ $.Site.BaseURL }}{{ .icon }}"
               class="svg-inject icon-svg icon-svg-md text-{{ .color }} me-4" alt="" /></div>
           <div>
             <h4 class="mb-1">{{ .title }}</h4>
             <p>{{ .description }}</p>
           </div>
-        </a>
+        </i>
       </li>
       {{ end }}
       <!-- /.tab-content -->
