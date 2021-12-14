@@ -6,6 +6,7 @@
 <meta name="keywords" content="{{ if .Site.Params.tags }}{{ with .Site.Params.tags }}{{ delimit . ", "}}{{ end }}{{ else if $meta.home.meta_tags }}{{ with $meta.home.meta_tags}}{{ delimit . ", "}}{{ end }}{{ end }}" />
 <link rel="canonical" href="{{ .Permalink }}" />
 <link rel="shortcut icon" href="{{ $.Site.BaseURL }}rankpillar-icon.png">
+<link rel="alternate" href="{{ .Permalink }}" hreflang="{{ i18n "href_lang"}}" />
 <link rel="stylesheet" href="{{ $.Site.BaseURL }}css/plugins.css">
 <link rel="stylesheet" href="{{ $.Site.BaseURL }}css/style.css">
 <link rel="preload" href="{{ $.Site.BaseURL }}css/colors/rankpillar.css" as="style" onload="this.rel='stylesheet'">
