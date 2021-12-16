@@ -1,0 +1,84 @@
+{{ $information := index .Site.Data .Site.Language.Lang }}
+<section class="wrapper bg-light">
+    <div class="container py-14 py-md-16">
+        {{ range $index, $item := .Params.Features }}
+        {{ if eq (mod $index 2) 0 }}
+        <div class="row gx-lg-8 gx-xl-12 gy-10 mb-14 mb-md-16 align-items-center">
+            <div class="col-lg-6 position-relative">
+                <div class="shape bg-line leaf rounded-circle rellax w-17 h-17" data-rellax-speed="1"
+                    style="top: -2rem; right: -0.6rem;"></div>
+                <div class="shape bg-pale-violet rounded-circle rellax w-17 h-17" data-rellax-speed="1"
+                    style="bottom: -2rem; left: -0.4rem;"></div>
+                <figure class="rounded mb-0"><img src="{{ $.Site.BaseURL }}{{ $item.image }}"
+                        srcset="{{ $.Site.BaseURL }}{{ $item.image }} 2x" alt=""></figure>
+            </div>
+            <!--/column -->
+            <div class="col-lg-6">
+                <h3 class="display-4 mb-4">{{ $item.title }}</h3>
+                <p class="mb-5">{{ $item.short_description }}</p>
+                <div class="row gy-3">
+                    <div class="col-xl-6">
+                        <ul class="icon-list bullet-bg bullet-soft-{{ $item.points_color }} mb-0">
+                            {{ range $item.points }}
+                            <li><span><i class="uil uil-check"></i></span><span>{{ . }}</span></li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+                <!--/.row -->
+                <a href="{{ $item.more_link | absLangURL }}"
+                    class="btn btn-soft-{{ $item.more_color }} rounded-pill mt-2">{{ $item.more_title }}</a>
+            </div>
+            <!--/column -->
+        </div>
+        {{ else }}
+        <div class="row gx-lg-8 gx-xl-12 gy-10 mb-14 mb-md-16 align-items-center">
+            <div class="col-lg-6 order-lg-2 position-relative">
+                <div class="shape bg-line aqua rounded-circle rellax w-17 h-17" data-rellax-speed="1"
+                    style="top: -2rem; left: -0.6rem;"></div>
+                <div class="shape bg-pale-red rounded-circle rellax w-17 h-17" data-rellax-speed="1"
+                    style="bottom: -2rem; right: -0.4rem;"></div>
+                <figure class="rounded mb-0"><img src="{{ $.Site.BaseURL }}{{ $item.image }}"
+                        srcset="{{ $.Site.BaseURL }}{{ $item.image }} 2x" alt=""></figure>
+            </div>
+            <!--/column -->
+            <div class="col-lg-6">
+                <h3 class="display-4 mb-4">{{ $item.title }}</h3>
+                <p class="mb-5">{{ $item.short_description }}</p>
+                <div class="row gy-3">
+                    <div class="col-xl-6">
+                        <ul class="icon-list bullet-bg bullet-soft-{{ $item.points_color }} mb-0">
+                            {{ range $item.points }}
+                            <li><span><i class="uil uil-check"></i></span><span>{{ . }}</span></li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+                <!--/.row -->
+                <a href="{{ $item.more_link | absLangURL }}"
+                    class="btn btn-soft-{{ $item.more_color }} rounded-pill mt-6 mb-0">{{ $item.more_title }}</a>
+            </div>
+            <!--/column -->
+        </div>
+        {{ end }}
+        {{ end }}
+        <!--/.row -->
+    </div>
+    <div class="container py-14 py-md-16">
+        {{ if .Params.show_media }}
+        <h2 class="fs-15 text-uppercase text-muted text-center mb-8">{{ $information.home.seven.media.title }}</h2>
+        <div class="px-lg-5">
+            <div class="row gx-0 gx-md-8 gx-xl-12 gy-8 align-items-center justify-content-center">
+                {{ range first $information.home.seven.media.limit_show $information.media.media }}
+                <div class="col-4 col-md-2">
+                    <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ $.Site.BaseURL }}{{ .logo }}"
+                            alt="{{ .title }}"></figure>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+    </div>
+    <!-- /.container -->
+</section>
+<!-- /section -->
