@@ -1,3 +1,63 @@
 {{ define "main" }}
-    {{ .Content }}
+{{ $category_title := .Title }}
+<section class="wrapper image-wrapper bg-image bg-overlay text-white"
+    data-image-src="{{ $.Site.BaseURL }}photos/bg3.jpeg"
+    style="background-image: url('{{ $.Site.BaseURL }}photos/bg3.jpeg')">
+    <div class="container pt-12 pb-14 pt-md-14 pb-md-14 text-center">
+        <div class="row">
+            <div class="col-md-10 col-xl-8 mx-auto">
+                <div class="post-header">
+                    <!-- /.post-category -->
+                    <h1 class="display-1 mb-4 text-white">{{ .Title }}</h1>
+                    <!-- /.post-meta -->
+                </div>
+                <!-- /.post-header -->
+            </div>
+            <!-- /column -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+
+<section class="wrapper bg-light wrapper-boerder">
+    <div class="container py-5 py-md-10">
+        <!-- /.row -->
+        <div class="position-relative">
+            <div class="carousel owl-carousel gap-small blog grid-view" data-margin="0" data-dots="true"
+                data-autoplay="false" data-autoplay-timeout="5000"
+                data-responsive='{"0":{"items": "1"}, "768":{"items": "2"}, "992":{"items": "2"}, "1200":{"items": "3"}}'>
+                {{ range .Pages.ByTitle }}
+                <div class="item">
+                    <div class="item-inner">
+                        <article>
+                            <div class="card">
+                                <figure class="card-img-top overlay overlay1 hover-scale"><a href="{{ .Permalink }}">
+                                        <img src="{{ $.Site.BaseURL }}{{ .Params.featured_image }}" alt="" /></a>
+                                    <figcaption>
+                                        <h5 class="from-top mb-0">{{ i18n "blog_read_more" }}</h5>
+                                    </figcaption>
+                                </figure>
+                                <div class="card-body">
+                                    <div class="post-header">
+                                        <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark"
+                                                href="{{ .Permalink }}">{{ .Title }}</a>
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <ul class="post-meta d-flex mb-0">
+                                        <li class="post-date"><i class="uil uil-calendar-alt"></i><span>{{ .Date
+                                                }}</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>
 {{ end }}

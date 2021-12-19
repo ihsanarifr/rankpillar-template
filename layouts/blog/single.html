@@ -8,9 +8,8 @@
         <div class="post-header">
           <div class="post-category text-line text-white">
             {{ range .Params.categories }}
-            <a href="#" class="text-reset" rel="category">{{ . }}</a>
+              <a href="{{ "" | absLangURL }}categories/{{ . | urlize }}" class="hover text-white" rel="category">{{ . }}</a>
             {{ end }}
-            <!-- {{ "blog/categories/" | absLangURL }}{{ . | urlize }} -->
           </div>
           <!-- /.post-category -->
           <h1 class="display-1 mb-4 text-white">{{ .Title }}</h1>

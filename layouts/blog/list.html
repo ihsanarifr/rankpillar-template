@@ -16,9 +16,8 @@
           <div class="post-header mb-5">
             <div class="post-category text-line">
               {{ range $item.Params.categories }}
-              <a href="#" class="hover" rel="category">{{ . }}</a>
+              <a href="{{ "" | absLangURL }}categories/{{ . | urlize }}" class="hover" rel="category">{{ . }}</a>
               {{ end }}
-              <!-- {{ $.Site.BaseURL }}blog/categories/{{ . | urlize }} -->
             </div>
             <!-- /.post-category -->
             <h2 class="post-title mt-1 mb-4"><a class="link-dark" href="{{ $item.Permalink }}">{{ $item.Title }}</a></h2>
@@ -73,13 +72,15 @@
     </div>
   </div>
 </section>
+{{ $taxo := "categories" }}
 {{ $paginate_categories := int $.Site.Params.blog_categories_paginate}}
-{{ range $taxonomy:= first $paginate_categories .Site.Taxonomies.categories.ByCount }}
+{{ with ($.Site.GetPage (printf "/%s" $taxo)) }}
+{{ range $taxonomy := first $paginate_categories .Pages }}
 <section class="wrapper bg-light wrapper-boerder">
   <div class="container py-5 py-md-10">
     <div class="row">
       <div class="col-lg-9 col-xl-8 col-xxl-7 mx-auto">
-        <h2 class="display-4 mb-6 text-center text-uppercase text-primary">{{ $taxonomy.Name }}</h2>
+        <h2 class="display-4 mb-6 text-center text-uppercase text-primary">{{ $taxonomy.Title }}</h2>
       </div>
       <!-- /column -->
     </div>
@@ -120,5 +121,6 @@
     </div>
   </div>
 </section>
+  {{ end }}
 {{ end }}
 {{ end }}
