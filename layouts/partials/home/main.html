@@ -76,8 +76,8 @@
       class="nav nav-tabs nav-tabs-bg nav-tabs-shadow-lg d-flex justify-content-between nav-justified flex-lg-row flex-column">
       {{ range $information.home.two.widgets}}
       <li class="nav-item"> <i class="nav-link d-flex flex-row active" data-bs-toggle="tab">
-          <div><img src="{{ $.Site.BaseURL }}{{ .icon }}"
-              class="svg-inject icon-svg icon-svg-md text-{{ .color }} me-4" alt="" /></div>
+          <div><img src="{{ $.Site.BaseURL }}{{ .icon }}" class="svg-inject icon-svg icon-svg-md text-{{ .color }} me-4"
+              alt="" /></div>
           <div>
             <h4 class="mb-1">{{ .title }}</h4>
             <p>{{ .description }}</p>
@@ -204,7 +204,8 @@
         <h3 class="display-4 mb-0 text-center px-xl-10 px-xxl-15">{{ $information.home.five.title }}</h3>
         <div class="row gx-lg-8 gx-xl-12 process-wrapper text-center mt-9" data-cues="slideInUp" data-group="process">
           {{ range $information.home.five.steps }}
-          <div class="col-md-4"> <img src="{{ $.Site.BaseURL }}{{ .icon }}" class="svg-inject icon-svg icon-svg-md text-{{ .color }} mb-3" alt="" />
+          <div class="col-md-4"> <img src="{{ $.Site.BaseURL }}{{ .icon }}"
+              class="svg-inject icon-svg icon-svg-md text-{{ .color }} mb-3" alt="" />
             <h4 class="mb-1">{{ .title }}</h4>
             <p>{{ .description }}</p>
           </div>
@@ -220,33 +221,34 @@
   <!-- /.container -->
 </section>
 
+{{ if $information.home.six.enable }}
 <section class="wrapper bg-light">
-  <div class="container py-14 py-md-16 pt-md-5">
+  <div class="container pt-md-16 pt-lg-16 py-14 py-md-16 pt-md-5">
     <div class="row gx-lg-8 gx-xl-12 gy-6 align-items-center">
       <div class="col-lg-7 position-relative">
-        <div class="shape bg-dot primary rellax w-18 h-18" data-rellax-speed="1" style="top: 0; left: -1.4rem; z-index: 0;"></div>
+        <div class="shape bg-dot primary rellax w-18 h-18" data-rellax-speed="1"
+          style="top: 0; left: -1.4rem; z-index: 0;"></div>
         <div class="row gx-md-5 gy-5">
           <div class="col-md-6">
             <figure class="rounded mt-md-10 position-relative"><img
-              src="{{ $.Site.BaseURL }}{{ $information.home.six.images.image_one }}"
-              srcset="{{ $.Site.BaseURL }}{{ $information.home.six.images.image_one }} 2x" alt=""></figure>
+                src="{{ $.Site.BaseURL }}{{ $information.home.six.images.image_one }}"
+                srcset="{{ $.Site.BaseURL }}{{ $information.home.six.images.image_one }} 2x" alt=""></figure>
           </div>
           <!--/column -->
           <div class="col-md-6">
             <div class="row gx-md-5 gy-5">
               <div class="col-md-12 order-md-2">
-                <figure class="rounded"><img
-                  src="{{ $.Site.BaseURL }}{{ $information.home.six.images.image_two }}"
-                  srcset="{{ $.Site.BaseURL }}{{ $information.home.six.images.image_two }} 2x" alt="">
-              </figure>
+                <figure class="rounded"><img src="{{ $.Site.BaseURL }}{{ $information.home.six.images.image_two }}"
+                    srcset="{{ $.Site.BaseURL }}{{ $information.home.six.images.image_two }} 2x" alt="">
+                </figure>
               </div>
               <!--/column -->
               <div class="col-md-10">
                 <div class="card bg-pale-primary text-center">
                   <div class="card-body py-11 counter-wrapper">
                     <h3 class="counter text-nowrap" style="visibility: visible;">{{ $information.home.six.counts
-                    }}</h3>
-                  <p class="mb-0">{{ $information.home.six.counts_title }}</p>
+                      }}</h3>
+                    <p class="mb-0">{{ $information.home.six.counts_title }}</p>
                   </div>
                   <!--/.card-body -->
                 </div>
@@ -285,11 +287,14 @@
   </div>
   <!-- /.container -->
 </section>
+{{ end }}
 <!-- /section -->
 <section class="wrapper bg-light wrapper-border">
-  <div class="container py-14 py-md-16 pt-md-6">
+  <div class="container pt-md-16 pt-lg-16 py-14 py-md-16 pt-md-6">
     <h2 class="fs-15 text-uppercase text-muted text-center mb-8">{{ $information.home.seven.client.title }}</h2>
-    <div class="carousel owl-carousel clients mb-0" data-margin="30" data-loop="true" data-dots="false" data-autoplay="true" data-autoplay-timeout="3000" data-responsive='{"0":{"items": "2"}, "768":{"items": "4"}, "992":{"items": "5"}, "1200":{"items": "6"}, "1400":{"items": "7"}}'>
+    <div class="carousel owl-carousel clients mb-0" data-margin="30" data-loop="true" data-dots="false"
+      data-autoplay="true" data-autoplay-timeout="3000"
+      data-responsive='{"0":{"items": "2"}, "768":{"items": "4"}, "992":{"items": "5"}, "1200":{"items": "6"}, "1400":{"items": "7"}}'>
       {{ range $information.clients.client }}
       <div class="item px-5"><img src="{{ $.Site.BaseURL }}{{ .logo }}" alt="{{ .title }}" /></div>
       {{ end }}
@@ -307,45 +312,46 @@
       data-responsive='{"0":{"items": "1"}, "768":{"items": "2"}, "992":{"items": "2"}, "1200":{"items": "3"}}'>
       <!-- Groups content according to content section.-->
       {{ range (where .Site.Pages "Section" "blog") }}
-        {{ range first $information.home.eight.paginate .Pages }}
-            <div class="item">
-              <article>
-                {{ if .Params.featured_image }}
-                <figure class="overlay overlay1 hover-scale rounded mb-5"><a href="{{ .Permalink }}"> <img
-                      src="{{ $.Site.BaseURL }}{{ .Params.featured_image }}" alt="" /></a>
-                  <figcaption>
-                    <h5 class="from-top mb-0">{{ i18n "read_more" }}</h5>
-                  </figcaption>
-                </figure>
-                {{ else }}
-                <figure class="overlay overlay1 hover-scale rounded mb-5"><a href="{{ .Permalink }}"> <img
-                  src="{{ $.Site.BaseURL }}photos/b4.jpg" alt="" /></a>
-                <figcaption>
-                  <h5 class="from-top mb-0">{{ i18n "read_more" }}</h5>
-                </figcaption>
-              </figure>
-                {{ end }}
-                <div class="post-header">
-                  <div class="post-category text-line">
-                    {{ range .Params.categories }}
-                      <a href="#" class="hover" rel="category">{{ . }}</a>
-                    {{ end }}
-                  </div>
-                  <!-- /.post-category -->
-                  <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="{{ .Permalink | absLangURL }}">{{ .Title }}</a></h2>
-                </div>
-                <!-- /.post-header -->
-                <div class="post-footer">
-                  <ul class="post-meta">
-                    <li class="post-date"><i class="uil uil-calendar-alt"></i><span>{{ .Date }}</span></li>
-                  </ul>
-                  <!-- /.post-meta -->
-                </div>
-                <!-- /.post-footer -->
-              </article>
-              <!-- /article -->
+      {{ range first $information.home.eight.paginate .Pages }}
+      <div class="item">
+        <article>
+          {{ if .Params.featured_image }}
+          <figure class="overlay overlay1 hover-scale rounded mb-5"><a href="{{ .Permalink }}"> <img
+                src="{{ $.Site.BaseURL }}{{ .Params.featured_image }}" alt="" /></a>
+            <figcaption>
+              <h5 class="from-top mb-0">{{ i18n "read_more" }}</h5>
+            </figcaption>
+          </figure>
+          {{ else }}
+          <figure class="overlay overlay1 hover-scale rounded mb-5"><a href="{{ .Permalink }}"> <img
+                src="{{ $.Site.BaseURL }}photos/b4.jpg" alt="" /></a>
+            <figcaption>
+              <h5 class="from-top mb-0">{{ i18n "read_more" }}</h5>
+            </figcaption>
+          </figure>
+          {{ end }}
+          <div class="post-header">
+            <div class="post-category text-line">
+              {{ range .Params.categories }}
+              <a href="#" class="hover" rel="category">{{ . }}</a>
+              {{ end }}
             </div>
-        {{ end }}
+            <!-- /.post-category -->
+            <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="{{ .Permalink | absLangURL }}">{{ .Title
+                }}</a></h2>
+          </div>
+          <!-- /.post-header -->
+          <div class="post-footer">
+            <ul class="post-meta">
+              <li class="post-date"><i class="uil uil-calendar-alt"></i><span>{{ .Date }}</span></li>
+            </ul>
+            <!-- /.post-meta -->
+          </div>
+          <!-- /.post-footer -->
+        </article>
+        <!-- /article -->
+      </div>
+      {{ end }}
       {{ end }}
     </div>
     <!-- /.owl-carousel -->
@@ -362,11 +368,13 @@
         {{ range first $information.home.seven.partners.limit_show $information.partners.partner }}
         <div class="col-4 col-md-2">
           {{ if .url }}
-            <a href="{{ .url }}" title="{{ .title }}" target="_blank">
-              <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ $.Site.BaseURL }}{{ .logo }}" alt="{{ .title }}"></figure>
-            </a>
+          <a href="{{ .url }}" title="{{ .title }}" target="_blank">
+            <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ $.Site.BaseURL }}{{ .logo }}"
+                alt="{{ .title }}"></figure>
+          </a>
           {{ else }}
-          <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ $.Site.BaseURL }}{{ .logo }}" alt="{{ .title }}"></figure>
+          <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ $.Site.BaseURL }}{{ .logo }}"
+              alt="{{ .title }}"></figure>
           {{ end }}
         </div>
         {{ end }}
@@ -380,11 +388,13 @@
         {{ range first $information.home.seven.media.limit_show $information.media.media }}
         <div class="col-4 col-md-2">
           {{ if .url }}
-            <a href="{{ .url }}" title="{{ .title }}" target="_blank">
-              <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ $.Site.BaseURL }}{{ .logo }}" alt="{{ .title }}"></figure>
-            </a>
+          <a href="{{ .url }}" title="{{ .title }}" target="_blank">
+            <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ $.Site.BaseURL }}{{ .logo }}"
+                alt="{{ .title }}"></figure>
+          </a>
           {{ else }}
-          <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ $.Site.BaseURL }}{{ .logo }}" alt="{{ .title }}"></figure>
+          <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ $.Site.BaseURL }}{{ .logo }}"
+              alt="{{ .title }}"></figure>
           {{ end }}
         </div>
         {{ end }}
