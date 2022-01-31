@@ -19,7 +19,7 @@
     <div class="widget">
       <h4 class="widget-title text-white mb-3">Get in Touch</h4>
       <address class="pe-xl-15 pe-xxl-17">{{ .Site.Params.Address }}</address>
-      <a href="mailto:#">i{{ .Site.Params.EmailSales }}</a><br /> +00 (123) 456 78 90
+      <a href="mailto:{{ .Site.Params.EmailSales }}">{{ .Site.Params.EmailSales }}</a><br /> {{ .Site.Params.Phone }}
     </div>
     <!-- /.widget -->
   </div>
